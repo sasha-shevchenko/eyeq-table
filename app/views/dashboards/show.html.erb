@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="edit-form">
+    <%= render "edit-form" %>
+  </div>
+  <% @categories.each do |category| %>
+    <div class="category-card">
+      <div>
+        <%= category.name %>
+      </div>
+      <div>
+        <%= link_to "Add menu item" %>
+      </div>
+    </div>
+  <% end %>
+  <div class="add-category">
+    <%= simple_form_for Category.new do |f| %>
+      <%= f.input :name %>
+      <%= f.button :submit, class: "btn btn-success"%>
+    <% end %>
+  </div>
+</div>
