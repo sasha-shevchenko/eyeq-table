@@ -11,6 +11,13 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def destroy
+    @category = Category.find(params[:id])
+    if @category.destroy
+      redirect_to dashboard_path(@category)
+    end
+  end
+
   private
 
   def strong_params
