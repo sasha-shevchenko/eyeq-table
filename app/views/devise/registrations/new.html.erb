@@ -6,7 +6,12 @@
   <div class="form-inputs">
     <%= f.input :name,
                 required: true,
-                autofocus: true %>
+                autofocus: true
+                label: "What´s the name of your restaurant?"%>
+    <%= f.input :cuisine,
+                required: true,
+                autofocus: true,
+                label: "What´s your restaurant's cuisine?"%>
     <%= f.input :email,
                 required: true,
                 autofocus: true,
