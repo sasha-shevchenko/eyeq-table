@@ -5,14 +5,15 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Category.new(strong_params)
+    @category.restaurant = current_restaurant
     if @category.save
-      redirect_to
+      redirect_to dashboard_path
     end
   end
 
   private
 
   def strong_params
-    params.require(:category).permit(:name, :restaurant_id)
+    params.require(:category).permit(:name)
   end
 end
