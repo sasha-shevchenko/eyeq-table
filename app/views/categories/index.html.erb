@@ -1,0 +1,17 @@
+<div class="container">
+  <ul class="category-list list-inline-item">
+    <% @categories.each do |category| %>
+      <li class="category-list-item">
+        <div class="category-index-card list-inline-item">
+
+          <h1 class="category-card-header"style="display:inline"><%= category.name %></h1>
+
+          <div class="category-index-card-img" style="display:inline">
+            <img src="https://saborgourmet.com//wp-content/uploads/Tapas-españolas.jpg">
+          </div>
+
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
