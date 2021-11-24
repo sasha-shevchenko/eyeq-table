@@ -82,21 +82,21 @@ nestea = Item.create!(
 
 cafe_con_leche = Item.create!(
     name: "Cafe con Leche"
-    description: "(coffe with milk basically cappuccino for all you basic people)"
+    description: "Basically the best cappuccino you'll ever gonna have."
     price: 1.50
     category: beverages
 )
 
 espresso = Item.create!(
     name: "Espresso"
-    description: "(espresso)"
+    description: "Life happens, coffee helps."
     price: 1.50
     category: beverages
 )
 
 estrella = Item.create!(
     name: "Estrella Cerveza"
-    description: "-"
+    description: "One is simply not enough."
     price: 3.00
     category: beverages
 )
