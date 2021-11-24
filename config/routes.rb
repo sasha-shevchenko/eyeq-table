@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :restaurants, only: [:show, :update] do
     resources :categories, only: [:create]
   end
-    resources :categories, except: [:create, :destroy, :index, :show, :edit, :new, :update] do
+    resources :categories, only: [] do
       resources :items, except: [:create, :destroy]
     end
     resources :categories, only: [:destroy]
