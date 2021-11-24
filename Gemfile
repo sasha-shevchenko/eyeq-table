@@ -35,6 +35,9 @@ gem 'simple_form'
 # Sign-up / log-in logic.
 gem 'devise'
 
+# Added by Piero Cloudinary gem
+gem 'cloudinary', '~> 1.16.0'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
