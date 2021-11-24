@@ -75,7 +75,7 @@ fanta = Item.create!(
 
 nestea = Item.create!(
     name: "Nestea (33cl)"
-    description: ""
+    description: "A fancy version of cold tea with sugar."
     price: 3.05
     category: beverages
 )
