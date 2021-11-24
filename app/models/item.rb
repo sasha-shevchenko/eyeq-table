@@ -6,8 +6,8 @@ class Item < ApplicationRecord
   validates :name, presence: true, length: { in: 2..10,
                                              too_long: "Item title length should be between 2 and 10 characters" }
 
-  validates :description, presence: true, length: { in: 5..100,
-                                                    too_long: "Item title length should be between 5 and 100 characters" }
+  validates :description, presence: true, length: { in: 5..120,
+                                                    too_long: "Item title length should be between 5 and 120 characters" }
 
   validates :price, presence: true, numericality: { greater_than: 0 }
 end
