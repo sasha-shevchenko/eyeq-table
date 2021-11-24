@@ -1,0 +1,16 @@
+<div class="top-card">
+  <h1><%= @category.name %></h1>
+</div>
+<div class="item-index-card">
+  <% @items.each do |item| %>
+    <div class="item-card">
+      <div class="item-img">
+
+      </div>
+      <div class="item-info">
+        <div><%= item.name %></div>
+        <div><%= item.price %></div>
+      </div>
+    </div>
+  <% end %>
+</div>

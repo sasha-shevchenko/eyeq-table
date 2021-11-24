@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="edit-form">
+    <%= render "edit-form" %>
+  </div>
+  <h3>Menu Categories</h3>
+  <% @categories.each do |category| %>
+    <div class="category-card">
+      <div class="category-name">
+        <%= category.name %>
+        <ul>
+          <% category.items.each do |item| %>
+            <li>
+              <%= item.name %>
+              <%= link_to item_path(item), method: :delete, data: { confirm: "Are you sure you want to delete?" } do %>
+                <i class="far fa-trash-alt"></i>
+              <% end %>
+              <%= link_to edit_category_item_path(category, item) do %>
+                <i class="far fa-edit"></i>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+        <div>
+          <%= link_to category_path(category), method: :delete, data: { confirm: "Are you sure you want to delete?" } do %>
+            <button type="button" class="btn btn-warning">Delete Category</button>
+          <% end %>
+          <%= link_to new_category_item_path(category) do %>
+            <button type="button" class="btn btn-info">Add Item</button>
+          <% end %>
+        </div>
+    </div>
+  <% end %>
+  <div class="add-category">
+    <%= simple_form_for Category.new do |f| %>
+      <%= f.input :name %>
+      <%= f.button :submit, class: "btn btn-success"%>
+    <% end %>
+  </div>
+</div>

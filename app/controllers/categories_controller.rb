@@ -11,6 +11,18 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def destroy
+    @category = Category.find(params[:id])
+    if @category.destroy
+      redirect_to dashboard_path
+    end
+  end
+
+  def index
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    @categories = @restaurant.categories
+  end
+
   private
 
   def strong_params
