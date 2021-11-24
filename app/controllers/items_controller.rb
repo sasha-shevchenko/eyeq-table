@@ -1,11 +1,12 @@
 class ItemsController < ApplicationController
   def new
+    @category = Category.find(params[:category_id])
     @item = Item.new
   end
 
   def create
     @item = Item.new(strong_params)
-    @item.restaurant = current_restaurant
+    @item.category_id = params[:category_id]
     if @item.save
       redirect_to dashboard_path
     end

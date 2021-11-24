@@ -16,14 +16,11 @@
             <li>
               <%= item.name %>
             </li>
-            <%= link_to new_category_item_path(item) do %>
-              <button type="button" class="btn btn-info">Add Item</button>
-            <% end %>
           <% end %>
         </ul>
-      </div>
-      <div>
-
+            <%= link_to new_category_item_path(category) do %>
+              <button type="button" class="btn btn-info">Add Item</button>
+            <% end %>
       </div>
     </div>
   <% end %>

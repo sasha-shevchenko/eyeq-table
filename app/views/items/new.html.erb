@@ -1,5 +1,6 @@
+<h2>Add item to <%= @category.name %></h2>
 <div class="add-item">
-  <%= simple_form_for @item do |f| %>
+  <%= simple_form_for [@category, @item] do |f| %>
     <%= f.input :name %>
     <%= f.input :description %>
     <%= f.input :price %>
