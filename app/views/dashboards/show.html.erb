@@ -5,17 +5,25 @@
   <h3>Menu Categories</h3>
   <% @categories.each do |category| %>
     <div class="category-card">
-      <div>
+      <div class="category-name">
         <%= category.name %><%= link_to category_path(category), method: :delete, data: { confirm: "Are you sure you want to delete?" } do %>
           <i class="far fa-trash-alt"></i>
         <% end %>
+      </div>
+      <div class="item-list">
         <ul>
           <% category.items.each do |item| %>
-            <li><%= item.name %></li><%= link_to category_items_path(item), method: :delete, data: { confirm: "Are you sure you want to delete?" } do %>
-              <i class="far fa-trash-alt"></i>
+            <li>
+              <%= item.name %>
+            </li>
+            <%= link_to new_category_item_path(item) do %>
+              <button type="button" class="btn btn-info">Add Item</button>
             <% end %>
           <% end %>
         </ul>
+      </div>
+      <div>
+
       </div>
     </div>
   <% end %>
@@ -25,5 +33,4 @@
       <%= f.button :submit, class: "btn btn-success"%>
     <% end %>
   </div>
-
 </div>
