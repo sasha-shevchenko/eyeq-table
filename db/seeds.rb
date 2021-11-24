@@ -9,7 +9,7 @@
 Restaurant.destroy_all
 Category.destroy_all
 Item.destroy_all
-Session_item.destroy_all
+SessionItem.destroy_all
 Session.destroy_all
 Table.destroy_all
 
@@ -59,7 +59,7 @@ agua = Item.create!(
   category: beverages
 )
 
-coca-cola = Item.create!(
+coca_cola = Item.create!(
   name: "Coca-Cola (33cl)",
   description: "No need for a description. Everyone knows what Coca-Cola is.. Have you been living under a rock?",
   price: 2.95,
@@ -75,7 +75,7 @@ fanta = Item.create!(
 
 nestea = Item.create!(
   name: "Nestea (33cl)",
-  description: "A fancy version of cold tea with sugar.",
+  description: "The canned version of cold tea with sugar.",
   price: 3.05,
   category: beverages
 )
@@ -112,7 +112,7 @@ clara = Item.create!(
 
 white_wine = Item.create!(
   name: "House Wine (white)",
-  description: '"One glass of "Vino blanco de la casa", as they say here.',
+  description: '"One glass of "Vino blanco de la casa, por favor", as they say here.',
   price: 5.00,
   category: wine_list
 )
@@ -199,7 +199,7 @@ bread = Item.create!(
 )
 
 croqueta_pollo = Item.create!(
-  name: "Croqueta de pollo",
+  name: "Croqueta de Pollo",
   description: "3 pieces. Crispy creamy Chicken Croquettes. The ideal comfort food.",
   price: 3.25,
   category: tapas
@@ -235,4 +235,4 @@ cheesecake = Item.create!(
   category: desserts
 )
 
-puts "Database is now seedes!"
+puts "Database is now seeded!"
