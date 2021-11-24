@@ -14,7 +14,7 @@ class CategoriesController < ApplicationController
   def destroy
     @category = Category.find(params[:id])
     if @category.destroy
-      redirect_to dashboard_path(@category)
+      redirect_to dashboard_path
     end
   end
 
