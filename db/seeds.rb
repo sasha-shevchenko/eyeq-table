@@ -18,7 +18,6 @@ puts "creating database ... "
 
 @la_esquinica = Restaurant.create!(
     name: "La Esquinica" #means "corner of the street" in Spanish:)
-    cuisine: "Spanish"
     email: "la-esquinica@tapasmail.com"
     password: "password"
   )
