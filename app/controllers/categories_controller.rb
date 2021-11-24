@@ -19,7 +19,8 @@ class CategoriesController < ApplicationController
   end
 
   def index
-    @categories = Category.all
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    @categories = @restaurant.categories
   end
 
   private
