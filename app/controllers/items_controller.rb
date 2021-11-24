@@ -13,11 +13,13 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    @category = Category.find(params[:category_id])
     @item = Item.find(params[:id])
   end
 
   def update
     @item = Item.find(params[:id])
+    @item.category_id = params[:category_id]
     if @item.update(strong_params)
       redirect_to dashboard_path
     end

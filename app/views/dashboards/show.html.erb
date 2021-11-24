@@ -14,7 +14,7 @@
               <%= link_to item_path(item), method: :delete, data: { confirm: "Are you sure you want to delete?" } do %>
                 <i class="far fa-trash-alt"></i>
               <% end %>
-              <%= link_to edit_category_item_path(item) do %>
+              <%= link_to edit_category_item_path(category, item) do %>
                 <i class="far fa-edit"></i>
               <% end %>
             </li>
