@@ -1,4 +1,8 @@
 class ItemsController < ApplicationController
+  def index
+    @items = Item.all
+  end
+
   def new
     @category = Category.find(params[:category_id])
     @item = Item.new
