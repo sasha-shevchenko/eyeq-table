@@ -12,6 +12,17 @@ class ItemsController < ApplicationController
     end
   end
 
+  def edit
+    @item = Item.find(params[:id])
+  end
+
+  def update
+    @item = Item.find(params[:id])
+    if @item.update(strong_params)
+      redirect_to dashboard_path
+    end
+  end
+
   def destroy
     @item = Item.find(params[:id])
     if @item.destroy
