@@ -23,7 +23,25 @@ puts "creating database ... "
   cuisine: "Spanish"
 )
 
-# menu category seeds
+# Restaurant tables seeds
+
+Table.create!(
+  number: 1
+)
+
+Table.create!(
+  number: 2
+)
+
+Table.create!(
+  number: 3
+)
+
+Table.create!(
+  number: 4
+)
+
+# Menu category seeds
 
 beverages = Category.create!(
   name: "Beverages",
@@ -50,7 +68,7 @@ desserts = Category.create!(
   restaurant: @la_esquinica
 )
 
-# Menu category: Beverages
+# Menu category - Beverages seeds
 
 agua = Item.create!(
   name: "Bottled Water",
@@ -108,7 +126,7 @@ clara = Item.create!(
   category: beverages
 )
 
-# Menu category: Wine List
+# Menu category - Wine List seeds
 
 white_wine = Item.create!(
   name: "House Wine (white)",
@@ -131,7 +149,7 @@ rose_wine = Item.create!(
   category: wine_list
 )
 
-# Menu category: Bocadillos
+# Menu category - Bocadillo seeds
 
 tuna_bocadillo = Item.create!(
   name: "Tuna Bocadillo",
@@ -154,7 +172,7 @@ ham_cheese_bocadillo = Item.create!(
   category: bocadillos
 )
 
-# Menu category: Tapas
+# Menu category - Tapas seeds
 
 patatasbravas = Item.create!(
   name: "Patatas Bravas",
@@ -212,7 +230,7 @@ chorizo = Item.create!(
   category: tapas
 )
 
-# Menu category: Desserts
+# Menu category - Desserts seeds
 
 donut = Item.create!(
   name: "Donut",
