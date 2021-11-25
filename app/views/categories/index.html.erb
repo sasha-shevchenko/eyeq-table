@@ -1,17 +1,21 @@
 <div class="categories-index-container">
   <ul class="category-list list-inline-item">
     <% @categories.each do |category| %>
-      <li class="category-list-item">
-        <div class="category-index-card list-inline-item">
+      <%= link_to category_items_path(category) do %>
+        <li class="category-list-item">
+          <div class="category-index-card list-inline-item">
 
-          <h1 class="category-card-header"style="display:inline"><%= category.name %></h1>
+            <h1 class="category-card-title"style="display:inline"><%= category.name %></h1>
 
-          <div class="category-index-card-img" style="display:inline">
-            <img src="https://saborgourmet.com//wp-content/uploads/Tapas-españolas.jpg">
+            <div class="category-index-card-img" style="display:inline">
+              <% if category.photo.attached? %>
+                <%= cl_image_tag category.photo.key, class: "card-img"%>
+              <% end %>
+            </div>
+
           </div>
-
-        </div>
-      </li>
+        </li>
+      <% end %>
     <% end %>
   </ul>
 </div>
