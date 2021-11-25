@@ -33,7 +33,7 @@ Table.create!(
 Table.create!(
   number: 2,
   restaurant: @la_esquinica
-
+)
 Table.create!(
   number: 3,
   restaurant: @la_esquinica
