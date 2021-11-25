@@ -1,7 +1,7 @@
 class SessionItemsController < ApplicationController
   def index
-    @session_items = SessionItem.all
-  end
+    @session_items = @current_session.session_items
+  end 
 
   def create
     @item = Item.find(params[:item_id])

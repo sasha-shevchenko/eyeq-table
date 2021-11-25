@@ -1,20 +1,33 @@
 .categories-index-container {
   display: flex;
   justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 .category-list {
   padding: 0px;
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
 }
-
 
 .category-list-item {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 20px;
+  width: 100%;
+  text-decoration: none;
+  color: black;
 }
 
-.category-card-header {
+.category-index-card {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 40px;
+  border: 1px solid;
+  border-radius: 25px;
+}
+
+.category-card-title {
   font-size: 20px;
 }
 
