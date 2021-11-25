@@ -8,4 +8,5 @@ class Restaurant < ApplicationRecord
   has_many :items, through: :categories
   has_many :tables, dependent: :destroy
   has_many :sessions, through: :tables
+  has_one_attached :logo
 end
