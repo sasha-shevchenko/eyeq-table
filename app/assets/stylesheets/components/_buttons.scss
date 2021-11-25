@@ -70,3 +70,18 @@
   font-size: 35px;
   text-align: center;
 }
+a {
+  margin: 0 auto;
+
+  .order-button {
+    color: white;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 32px;
+    background: #FED060;
+    transition: 0.3s ease;
+    text-decoration: bolder;
+    width: 180px;
+    height: 40px;
+  }
+}
