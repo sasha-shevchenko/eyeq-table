@@ -50,26 +50,36 @@ beverages = Category.create!(
   name: "Beverages",
   restaurant: @la_esquinica
 )
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637851435/development/Beverages_xlv9to.png')
+beverages.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 wine_list = Category.create!(
   name: "Wine List",
   restaurant: @la_esquinica
 )
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637851788/development/Wines_ppg3k8.png')
+wine_list.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 bocadillos = Category.create!(
   name: "Bocadillos",
   restaurant: @la_esquinica
 )
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637851853/development/Bocadillos_czipmx.png')
+bocadillos.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 tapas = Category.create!(
   name: "Tapas",
   restaurant: @la_esquinica
 )
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637851688/development/Tapas_jobaqh.png')
+tapas.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 desserts = Category.create!(
   name: "Desserts",
   restaurant: @la_esquinica
 )
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637851877/development/Cheesecake_jwcpfd.png')
+desserts.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 # Menu category - Beverages seeds
 
