@@ -53,7 +53,7 @@ desserts = Category.create!(
 # Menu category: Beverages
 
 agua = Item.create!(
-  name: "Botteled Water",
+  name: "Bottled Water",
   description: "Vichy Catalan natural sparkling mineral water (500 ml). Perfect cure for your hangover.",
   price: 1.95,
   category: beverages
@@ -117,7 +117,7 @@ white_wine = Item.create!(
   category: wine_list
 )
 
-red_white = Item.create!(
+red_wine = Item.create!(
   name: "House Wine (red)",
   description: "Glass of Red Wine with notes of vanilla and an intense black cherry aroma. You will probably deeply regret the 5th glass tomorrow",
   price: 5.50,
