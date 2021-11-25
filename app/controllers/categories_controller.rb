@@ -18,6 +18,11 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def index
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    @categories = @restaurant.categories
+  end
+
   private
 
   def strong_params
