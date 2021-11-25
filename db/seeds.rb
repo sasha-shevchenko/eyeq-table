@@ -26,19 +26,22 @@ puts "creating database ... "
 # Restaurant tables seeds
 
 Table.create!(
-  number: 1
+  number: 1,
+  restaurant: @la_esquinica
 )
 
 Table.create!(
-  number: 2
+  number: 2,
+  restaurant: @la_esquinica
+
+Table.create!(
+  number: 3,
+  restaurant: @la_esquinica
 )
 
 Table.create!(
-  number: 3
-)
-
-Table.create!(
-  number: 4
+  number: 4,
+  restaurant: @la_esquinica
 )
 
 # Menu category seeds
