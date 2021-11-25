@@ -1,16 +1,16 @@
-<%= <p> </p> %></p>
+<div><%= image_tag @current_session.restaurant.logo.url %></div>
+<div><h1>My Order</h1></div>
 <div class="item-index-card">
-  <% @items.each do |item| %>
+  <% @current_session.items.distinct.each do |item| %>
     <div class="item-card">
       <div class="item-img">
-
       </div>
       <div class="item-info">
         <div><%= item.name %></div>
-        <div><%= item.price %></div>
-        <!--  <div><%= item.quantity ? %></div>  -->
+        <div><%= item.price * @current_session.session_items.where(item: item).count  %></div>
       </div>
     </div>
   <% end %>
 </div>
-<div><button type="button" class="btn btn-success">Success</button></div>
+<div><button type="button" class="btn btn-success">Send Order | <%= @current_session.bill_total %></button></div>
+<%= @current_session.id %>
