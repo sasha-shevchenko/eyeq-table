@@ -1,14 +1,14 @@
 <div class="top-card">
   <h1><%= @category.name %></h1>
   <div>
-  <%= image_tag "patatas.png" %>
+  <%= cl_image_tag @category.photo.key %>
   </div>
 </div>
 <div class="item-index-card">
   <% @items.each do |item| %>
     <div class="item-card">
       <div class="item-img">
-        <%= image_tag "rose.png" %>
+        <%= cl_image_tag item.photo.key %>
       </div>
       <div class="item-info">
         <div><%= item.name %></div>
