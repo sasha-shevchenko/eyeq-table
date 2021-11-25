@@ -15,6 +15,10 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'dashboards#show', as: :dashboard
   root to: 'dashboards#show'
 
+  resources :tables, only: [] do
+    resources :sessions, only: :new
+  end
+
   # resources :categories, only: [:create, :destroy] do
   #   resources :items, only: [:new, :create, :edit, :update]
   # end

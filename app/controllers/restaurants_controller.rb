@@ -1,5 +1,5 @@
 class RestaurantsController < ApplicationController
-  skip_before_action :authenticate_restaurant!, only: :home
+  skip_before_action :authenticate_restaurant!, only: [:home, :show]
   def show
     @categories = current_restaurant.categories
   end
