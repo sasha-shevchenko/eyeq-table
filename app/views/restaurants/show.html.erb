@@ -1,22 +1,28 @@
+<%= render "shared/navbar" %>
+<div>
+  <img src="https://media.istockphoto.com/photos/directly-above-view-of-tapas-picture-id1224986732?b=1&k=20&m=1224986732&s=170667a&w=0&h=3LH33ccCkucCXBDrQ_ZuHoeWwmHdQIOi3VzCy-CEb8A="; class = "coverpicture">
+</div>
+<div class = "image_cropper avatarposition">
+    <%=image_tag "laesquinica", class: "profile-pic", alt: "avatar"%>
+</div>
+<div class = welcometext >Welcome to La Esquinica!</div>
+<div>
+  <%= link_to "Menu", "#", class: "btn btn-flat-menu justify-content-center center" %>
+</div>
 
-<div class="d-flex">
-  <div class = "image_cropper d-flex justify-content-center">
-  <%=image_tag "laesquinica", class: "profile-pic", alt: "avatar-large"%>
+<div>
+  <%= link_to "Request Bill", "#", class: "btn btn-flat-feedback justify-content-center center" %>
+</div>
+
+
+<div href="#"class = "btn btn-flat-social">
+  <div class = "d-flex">
+    <div>
+    <i class="fab fa-facebook-f"></i>
+    <i class="fab fa-instagram"></i>
+    </div>
+    <div>
+    Leave Review <i class="fas fa-arrow-right"></i>
+    </div>
   </div>
-  <div><%= link_to "Request Bill", "#", class: "btn btn-flat-request d-flex justify-content-center" %>
-  </div>
-</div>
-
-<div>
-  <%= link_to "Menu", "#", class: "btn btn-flat-menu justify-content-center" %>
-</div>
-
-<div>
-  <%= link_to "Feedback", "#", class: "btn btn-flat-feedback justify-content-center" %>
-</div>
-
-<div>
-  <a href="#"class = "btn btn-flat-social">
-  <i class="fab fa-facebook-f"></i>
-  </a>
 </div>
