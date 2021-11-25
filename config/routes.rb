@@ -10,7 +10,11 @@ Rails.application.routes.draw do
     resources :items, only: [:index, :new, :create, :edit, :update]
   end
 
-  resources :items, only: :destroy
+  resources :items, only: :destroy do
+    resources :session_items, only: [:create]
+  end
+
+  resources :session_items, only: [:index, :update, :destroy]
 
   get '/dashboard', to: 'dashboards#show', as: :dashboard
   root to: 'dashboards#show'
