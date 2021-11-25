@@ -1,15 +1,18 @@
 <div class="top-card">
   <h1><%= @category.name %></h1>
+  <div>
+  <%= image_tag "patatas.png" %>
+  </div>
 </div>
 <div class="item-index-card">
   <% @items.each do |item| %>
     <div class="item-card">
       <div class="item-img">
-
+        <%= image_tag "rose.png" %>
       </div>
       <div class="item-info">
         <div><%= item.name %></div>
-        <div><%= item.price %></div>
+        <div><%= item.price %></div><i class="fas fa-plus-circle"></i><i class="fas fa-minus-circle"></i>
       </div>
     </div>
   <% end %>

@@ -3,6 +3,7 @@ h1 {
 }
 .top-card {
   background-color: #FED060;
+  display: flex;
 }
 .item-index-card {
   background-color: white;
@@ -20,10 +21,10 @@ h1 {
   height: 140px;
   margin: 5px 7px;
   display: flex;
-  justify-content: space-between;
     .item-info {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: space-evenly;
+      flex-grow: 1;
     }
 }
