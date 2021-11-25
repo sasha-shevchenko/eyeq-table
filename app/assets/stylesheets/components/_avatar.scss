@@ -20,18 +20,37 @@
 }
 
 .image_cropper {
-    width: 100px;
     height: 100px;
     position: relative;
     overflow: hidden;
     border-radius: 50%;
-    margin-top: 70px;
+    margin-top: -50px;
 }
 
 .profile-pic {
-  display: inline;
-  margin: 0 auto;
-  margin-left: -25%; //centers the image
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   height: 100%;
-  width: auto;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  border: white 1px solid;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.coverpicture {
+  height: 130px;
+  width: 100%;
+  border-bottom-right-radius: 34px;
+  border-bottom-left-radius: 34px;
+}
+
+.avatarposition {
+  align-items: center;
 }
