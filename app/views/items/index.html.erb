@@ -14,8 +14,10 @@
         <div><%= item.name %></div>
         <div>
           <%= item.price %>
-          <%= button_to session_item_path(item.session_items.last), method: :delete do %>
-            <i class="fas fa-minus-circle"></i>
+          <% if item.session_items.any? %>
+            <%= button_to session_item_path(item.session_items.last), method: :delete do %>
+              <i class="fas fa-minus-circle"></i>
+            <% end %>
           <% end %>
           <%= @session_items_per_item[item.id] %>
           <%= button_to item_session_items_path(item) do %>
