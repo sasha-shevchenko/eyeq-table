@@ -1,4 +1,6 @@
 class SessionItemsController < ApplicationController
+  skip_before_action :authenticate_restaurant!
+
   def index
     @session_items = @current_session.session_items
     @restaurant = @current_session.restaurant
@@ -18,5 +20,8 @@ class SessionItemsController < ApplicationController
     if @session_item.destroy
       redirect_to category_items_path(@category)
     end
+  end
+
+  def status
   end
 end

@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  skip_before_action :authenticate_restaurant!, only: :index
   def new
     @category = Category.new
   end

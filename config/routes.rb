@@ -14,7 +14,11 @@ Rails.application.routes.draw do
     resources :session_items, only: [:create]
   end
 
-  resources :session_items, only: [:index, :destroy]
+  resources :session_items, only: [:index, :destroy] do
+    collection do
+      get "status", as: :status
+    end
+  end
 
   get '/dashboard', to: 'dashboards#show', as: :dashboard
   root to: 'dashboards#show'

@@ -18,4 +18,6 @@
     </div>
   <% end %>
 </div>
-<div><button type="button" class="btn btn-success">Send Order | <%= @current_session.bill_total %>€</button></div>
+<div>
+<%= link_to "Send Order | #{@current_session.bill_total}", status_session_items_path, class: "btn btn-success" %>
+</div>
