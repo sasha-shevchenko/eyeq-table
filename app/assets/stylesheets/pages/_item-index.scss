@@ -3,7 +3,8 @@ h1 {
 }
 .top-card {
   background-color: #FED060;
-  display: flex;
+  color: white;
+  height: 190px;
 }
 .item-index-card {
   background-color: white;
@@ -11,7 +12,12 @@ h1 {
   border-top-right-radius: 32px;
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
+}
+
+.arrowleft {
+  font-size:30px;
+  margin-top:8px;
+  color: white;
 }
 
 .item-card {
@@ -27,4 +33,33 @@ h1 {
       justify-content: space-evenly;
       flex-grow: 1;
     }
+}
+
+.backtocattext {
+  margin-right: 20px;
+}
+
+.backtocat {
+  display: flex;
+  margin-right: 100px;
+}
+
+.yellowbackground {
+  background-color: #FED060;
+}
+
+.catimgsize img{
+  height: 130px;
+  width: 130px;
+  object-fit: contain;
+  display: block;
+  margin-left: 140px;
+  margin-right: auto;
+}
+
+.item-index-card img {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+  margin-top: 15px;
 }
