@@ -10,7 +10,9 @@
         <ul>
           <% category.items.each do |item| %>
             <li>
-              <%= item.name %> -
+              <strong><%= item.name %></strong> -
+              <%= item.description %> -
+              <strong><%= item.price %>€</strong> -
               <%= link_to item_path(item), method: :delete, data: { confirm: "Are you sure you want to delete?" } do %>
                 <i class="far fa-trash-alt"></i>
               <% end %> -
