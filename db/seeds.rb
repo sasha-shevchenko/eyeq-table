@@ -50,35 +50,35 @@ beverages = Category.create!(
   name: "Beverages",
   restaurant: @la_esquinica
 )
-file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637851435/development/Beverages_xlv9to.png')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637922475/eyeqtable/Beverages_u27tou.png')
 beverages.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 wine_list = Category.create!(
   name: "Wine List",
   restaurant: @la_esquinica
 )
-file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637851788/development/Wines_ppg3k8.png')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637922603/eyeqtable/Wines_iqannd.png')
 wine_list.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 bocadillos = Category.create!(
   name: "Bocadillos",
   restaurant: @la_esquinica
 )
-file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637851853/development/Bocadillos_czipmx.png')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637922473/eyeqtable/Bocadillos_uggjbj.png')
 bocadillos.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 tapas = Category.create!(
   name: "Tapas",
   restaurant: @la_esquinica
 )
-file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637851688/development/Tapas_jobaqh.png')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637922471/eyeqtable/Tapas_hu4ryk.png')
 tapas.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 desserts = Category.create!(
   name: "Desserts",
   restaurant: @la_esquinica
 )
-file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637851877/development/Cheesecake_jwcpfd.png')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637922627/eyeqtable/Cheesecake_jlc8un.png')
 desserts.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 # Menu category - Beverages seeds
@@ -89,7 +89,7 @@ agua = Item.create!(
   price: 1.95,
   category: beverages
 )
-file = URI.open('https://www.bodecall.com/images/stories/virtuemart/product/agua-vichy-catalan-25-cl.png')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637923305/eyeqtable/agua_u8xncl.png')
 agua.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 coca_cola = Item.create!(
@@ -98,7 +98,7 @@ coca_cola = Item.create!(
   price: 2.95,
   category: beverages
 )
-file = URI.open('http://assets.stickpng.com/thumbs/580b57fbd9996e24bc43c0de.png')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637923305/eyeqtable/cola_olq2vx.png')
 coca_cola.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 fanta = Item.create!(
@@ -107,7 +107,7 @@ fanta = Item.create!(
   price: 2.95,
   category: beverages
 )
-file = URI.open('http://assets.stickpng.com/images/580b57fbd9996e24bc43c10f.png')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637923305/eyeqtable/fanta_wvwx6o.png')
 fanta.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 nestea = Item.create!(
@@ -116,7 +116,7 @@ nestea = Item.create!(
   price: 3.05,
   category: beverages
 )
-file = URI.open('https://waramofood.com/wp-content/uploads/2020/06/nestea-limon-lata-330-ml.png')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637923306/eyeqtable/nestea_hlyo9x.png')
 nestea.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 cafe_con_leche = Item.create!(
@@ -125,7 +125,7 @@ cafe_con_leche = Item.create!(
   price: 1.50,
   category: beverages
 )
-file = URI.open('https://tecnogourmet.com/wp-content/uploads/cafe-leche.png')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637923305/eyeqtable/cafe-leche_tpkwb4.png')
 cafe_con_leche.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 espresso = Item.create!(
@@ -134,16 +134,16 @@ espresso = Item.create!(
   price: 1.50,
   category: beverages
 )
-file = URI.open('https://www.delonghi.com/Global/recipes/Coffee/long.png')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637923305/eyeqtable/espresso_xpklds.png')
 espresso.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 estrella = Item.create!(
   name: "Estrella Cerveza (33cl)",
-  description: "One glass of Estrella... but one is simply not enough.",
+  description: "Bottle of Estrella... research has shown that one will probably not be enough for you.",
   price: 3.00,
   category: beverages
 )
-file = URI.open('https://static.damm.com/sites/default/files/config-page/estrella_header_logo/estrella_damm_en_850.png')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637923306/eyeqtable/estrella_b0b0oa.png')
 estrella.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 clara = Item.create!(
@@ -152,7 +152,7 @@ clara = Item.create!(
   price: 4.15,
   category: beverages
 )
-file = URI.open('https://static.damm.com/sites/default/files/migrate_default_content_files/lemon-bottle.png')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637923306/eyeqtable/clara_qoba3a.png')
 clara.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 # Menu category - Wine List seeds
@@ -163,7 +163,7 @@ white_wine = Item.create!(
   price: 5.00,
   category: wine_list
 )
-file = URI.open('https://www.campoviejo.com/sites/default/files/2018-12/cv-semisweet-496x1540px-bottle.png')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637923306/eyeqtable/white-wine_gnuggf.png')
 white_wine.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 red_wine = Item.create!(
@@ -172,7 +172,7 @@ red_wine = Item.create!(
   price: 5.50,
   category: wine_list
 )
-file = URI.open('https://static2.aporvino.com/8467-thickbox_default/cune-ribera-del-duero-2016.jpg')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637923306/eyeqtable/red-wine_tcknzd.png')
 red_wine.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 rose_wine = Item.create!(
@@ -181,7 +181,7 @@ rose_wine = Item.create!(
   price: 5.00,
   category: wine_list
 )
-file = URI.open('https://www.pikpng.com/pngl/b/534-5342758_jacobs-creek-shiraz-rose-750ml-rose-wine-bottle.png')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637923306/eyeqtable/rose-wine_kvo8yk.png')
 rose_wine.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 # Menu category - Bocadillo seeds
@@ -192,7 +192,7 @@ tuna_bocadillo = Item.create!(
   price: 3.50,
   category: bocadillos
 )
-file = URI.open('https://www.cater-line.com/wp-content/uploads/2014/04/BC1_Bocata_Atun.png')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637923307/eyeqtable/tuna-bocadillo_eorait.png')
 tuna_bocadillo.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 ham_tomato_bocadillo = Item.create!(
@@ -201,7 +201,7 @@ ham_tomato_bocadillo = Item.create!(
   price: 3.00,
   category: bocadillos
 )
-file = URI.open('https://ae01.alicdn.com/kf/Ub60af05d491f4146892e97d4f4694e21b.jpg')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637923306/eyeqtable/ham-tomato-bocadillo_a6n9y7.webp')
 ham_tomato_bocadillo.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 ham_cheese_bocadillo = Item.create!(
@@ -210,7 +210,7 @@ ham_cheese_bocadillo = Item.create!(
   price: 3.00,
   category: bocadillos
 )
-file = URI.open('https://canelaymiel.cl/wp-content/uploads/2020/08/baguette-jamon-serrano-queso.png')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637923306/eyeqtable/ham-cheese-bocadillo_rzsppc.png')
 ham_cheese_bocadillo.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 # Menu category - Tapas seeds
@@ -221,7 +221,7 @@ patatasbravas = Item.create!(
   price: 3.95,
   category: tapas
 )
-file = File.open('db/Images/Papas Bravas.png')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637924921/eyeqtable/patatas-bravas_jtd8ss.png')
 patatasbravas.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 mushrooms = Item.create!(
@@ -230,7 +230,7 @@ mushrooms = Item.create!(
   price: 3.75,
   category: tapas
 )
-file = File.open('db/Images/mushrooms.png')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637924918/eyeqtable/mushrooms_yztnet.png')
 mushrooms.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 fried_calamari = Item.create!(
@@ -239,7 +239,7 @@ fried_calamari = Item.create!(
   price: 4.15,
   category: tapas
 )
-file = File.open('db/Images/calamari.png')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637924925/eyeqtable/calamari_swprhr.png')
 fried_calamari.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 pumpkin_soup = Item.create!(
@@ -248,7 +248,7 @@ pumpkin_soup = Item.create!(
   price: 2.50,
   category: tapas
 )
-file = URI.open('https://pro2-bar-s3-cdn-cf2.myportfolio.com/bb3f377c-b2f6-4e0c-ac7b-47ad9901996e/df1a3b32-fb2c-4c23-b4fa-dabaef2c5097_rw_1200.png?h=2a2d49647add3e7d6d77ef618a90d6a0')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637924918/eyeqtable/pumpkin-soup_pyfojq.png')
 pumpkin_soup.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 ham_and_cheese = Item.create!(
@@ -257,7 +257,7 @@ ham_and_cheese = Item.create!(
   price: 3.00,
   category: tapas
 )
-file = File.open('db/Images/Tapas.png')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637922471/eyeqtable/Tapas_hu4ryk.png')
 ham_and_cheese.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 bread = Item.create!(
@@ -266,7 +266,7 @@ bread = Item.create!(
   price: 1.50,
   category: tapas
 )
-file = File.open('db/Images/Bread.png')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637924923/eyeqtable/bread_ekrhwa.png')
 bread.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 croqueta_pollo = Item.create!(
@@ -275,7 +275,7 @@ croqueta_pollo = Item.create!(
   price: 3.25,
   category: tapas
 )
-file = File.open('db/Images/croqueta.png')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637924918/eyeqtable/croqueta_xuzs1a.png')
 croqueta_pollo.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 chorizo = Item.create!(
@@ -284,7 +284,7 @@ chorizo = Item.create!(
   price: 4.50,
   category: tapas
 )
-file = File.open('db/Images/Chorizo.png')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637924919/eyeqtable/chorizo_yjqyzs.png')
 chorizo.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 # Menu category - Desserts seeds
@@ -295,7 +295,7 @@ donut = Item.create!(
   price: 3.25,
   category: desserts
 )
-file = File.open('db/Images/donut.png')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637925007/eyeqtable/donut_tcuk88.png')
 donut.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 crema_catalana = Item.create!(
@@ -304,7 +304,7 @@ crema_catalana = Item.create!(
   price: 4.15,
   category: desserts
 )
-file = URI.open('https://pro2-bar-s3-cdn-cf4.myportfolio.com/bb3f377c-b2f6-4e0c-ac7b-47ad9901996e/508979eb-fafd-4665-aa1d-c4cf46e84071_rw_1200.png?h=178ba8408fa840eb897432d986bdd474')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637925007/eyeqtable/crema-catalana_rnh14e.png')
 crema_catalana.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 cheesecake = Item.create!(
@@ -313,7 +313,7 @@ cheesecake = Item.create!(
   price: 3.95,
   category: desserts
 )
-file = File.open('db/Images/cheesecake.png')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637922627/eyeqtable/Cheesecake_jlc8un.png')
 cheesecake.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 puts "Database is now seeded!"
