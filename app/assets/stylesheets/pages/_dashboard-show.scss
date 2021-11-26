@@ -1,4 +1,15 @@
 .dashboard-show-container {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
+}
+.dash-item-list{
+  li {
+    margin: 7px;
+      .far {
+        color: #D9A321;
+      }
+  }
+  ul {
+    list-style: none;
+  }
 }
