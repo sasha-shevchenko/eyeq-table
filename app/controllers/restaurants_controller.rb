@@ -1,7 +1,8 @@
 class RestaurantsController < ApplicationController
   skip_before_action :authenticate_restaurant!, only: [:home, :show]
   def show
-    @categories = current_restaurant.categories
+    @restaurant = Restaurant.find(params[:id])
+    @categories = @restaurant.categories
   end
 
   def update

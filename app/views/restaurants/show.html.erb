@@ -7,7 +7,7 @@
 </div>
 <div class = welcometext >Welcome to La Esquinica!</div>
 <div>
-  <%= link_to "Menu", "#", class: "btn btn-flat-menu justify-content-center center" %>
+  <%= link_to "Menu", restaurant_categories_path(@restaurant), class: "btn btn-flat-menu justify-content-center center" %>
 </div>
 
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
@@ -32,11 +32,14 @@
 <div href="#"class = "btn btn-flat-social">
   <div class = "d-flex">
     <div>
-    <i class="fab fa-facebook-f"></i>
-    <i class="fab fa-instagram"></i>
+      <a href="https://www.facebook.com/La-Esquinica-101672334910097/" class="fab fa-facebook-f"></a>
     </div>
     <div>
-    Leave Review <i class="fas fa-arrow-right"></i>
+      <a href="https://www.instagram.com/laesquinica/?hl=es" class="fab fa-instagram"></a>
+    </div>
+    <div>
+      <a href="https://www.tripadvisor.com/UserReviewEdit-g187497-d877654-La_Esquinica-Barcelona_Catalonia.html">Leave Review!</a>
+      <!-- <i class="fas fa-arrow-right"></i> do we need an arrow? -->
     </div>
   </div>
 </div>
