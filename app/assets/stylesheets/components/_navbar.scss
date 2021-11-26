@@ -1,7 +1,10 @@
-.navbar .navbar-light {
-  background: #FED060;
+.navbar-light {
+  background-color: #FED060;
+  padding: 0;
 }
 ul {
+  display: flex;
+  justify-content: space-around;
   list-style: none;
   width: 100%;
   margin: 0;
@@ -11,4 +14,8 @@ ul {
       margin: 0;
       padding: 0;
     }
+}
+.nav-item .avatar {
+  filter: invert(80%) sepia(17%) saturate(2138%) hue-rotate(345deg) brightness(88%) contrast(92%);
+  width: 30px;
 }
