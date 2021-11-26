@@ -4,16 +4,16 @@
   </div>
   <h3>Menu Categories</h3>
   <% @categories.each do |category| %>
-    <div class="category-card">
-      <div class="category-name">
-        <%= category.name %>
+    <div class="dash-category-card">
+      <h3><%= category.name %></h3>
+      <div class="dash-item-list">
         <ul>
           <% category.items.each do |item| %>
             <li>
-              <%= item.name %>
+              <%= item.name %> -
               <%= link_to item_path(item), method: :delete, data: { confirm: "Are you sure you want to delete?" } do %>
                 <i class="far fa-trash-alt"></i>
-              <% end %>
+              <% end %> -
               <%= link_to edit_category_item_path(category, item) do %>
                 <i class="far fa-edit"></i>
               <% end %>
@@ -21,14 +21,14 @@
           <% end %>
         </ul>
       </div>
-        <div>
-          <%= link_to category_path(category), method: :delete, data: { confirm: "Are you sure you want to delete?" } do %>
-            <button type="button" class="btn btn-warning">Delete Category</button>
-          <% end %>
-          <%= link_to new_category_item_path(category) do %>
-            <button type="button" class="btn btn-info">Add Item</button>
-          <% end %>
-        </div>
+      <div class="dash-cat-buttons">
+        <%= link_to category_path(category), method: :delete, data: { confirm: "Are you sure you want to delete?" } do %>
+          <button type="button" class="btn btn-warning">Delete Category</button>
+        <% end %>
+        <%= link_to new_category_item_path(category) do %>
+          <button type="button" class="btn btn-info">Add Item</button>
+        <% end %>
+      </div>
     </div>
   <% end %>
   <div class="add-category">
