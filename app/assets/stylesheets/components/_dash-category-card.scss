@@ -22,11 +22,8 @@
 }
 
 .category-card {
-  height: 163px;
+  height: 250px;
   width: 100vw;
-  // display: flex;
-  // justify-content: space-around;
-  // align-items: center;
 }
 
 .category-cards a:nth-child(4n + 2) {
@@ -40,8 +37,9 @@
 }
 
 .category-card img {
-  height: 100px;
-  width: 100px;
+  height: 130px;
+  width: 130px;
   float: right;
-  padding-right: 20px;
+  object-fit: contain;
+  padding-right: 30px;
 }
