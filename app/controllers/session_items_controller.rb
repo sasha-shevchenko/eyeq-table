@@ -3,6 +3,7 @@ class SessionItemsController < ApplicationController
 
   def index
     @session_items = @current_session.session_items
+    @restaurant = @current_session.restaurant
   end
 
   def create

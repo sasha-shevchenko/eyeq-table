@@ -2,13 +2,13 @@
 <div class = "yellowbackground">
   <div class="top-card">
     <div class = "backtocat">
-    <%= link_to restaurant_categories_path(@category.restaurant) do %>
-    <i class="far fa-arrow-alt-circle-left arrowleft"></i>
-    <% end %>
-    <h1 class = backtocattext ><%= @category.name %></h1>
+      <%= link_to restaurant_categories_path(@category.restaurant) do %>
+        <i class="far fa-arrow-alt-circle-left arrowleft"></i>
+      <% end %>
+      <h1 class = backtocattext ><%= @category.name %></h1>
     </div>
     <div class="center catimgsize">
-    <%= cl_image_tag @category.photo.key %>
+      <%= cl_image_tag @category.photo.key %>
     </div>
   </div>
   <div class="item-index-card">
@@ -20,7 +20,7 @@
         <div class="item-info">
           <div><%= item.name %></div>
           <div>
-            <%= item.price %>
+            <%= item.price %> €
             <% if item.session_items.any? %>
               <%= button_to session_item_path(item.session_items.last), method: :delete do %>
                 <i class="fas fa-minus-circle"></i>

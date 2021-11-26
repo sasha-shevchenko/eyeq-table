@@ -1,22 +1,20 @@
 <%= render "shared/navbar" %>
-<div class="categories-index-container">
-  <ul class="category-list list-inline-item">
+<div class = "back-to-cat">
+  <%= link_to restaurant_path(@restaurant) do %>
+    <i class="far fa-arrow-alt-circle-left arrowleft"></i>
+  <% end %>
+</div>
+<div class="category-cards">
     <% @categories.each do |category| %>
-      <%= link_to category_items_path(category) do %>
-        <li class="category-list-item">
-          <div class="category-index-card list-inline-item">
-
-            <h1 class="category-card-title"style="display:inline"><%= category.name %></h1>
-
-            <div class="category-index-card-img" style="display:inline">
-              <% if category.photo.attached? %>
-                <%= cl_image_tag category.photo.key, class: "card-img"%>
-              <% end %>
-            </div>
-
+      <%= link_to category_items_path(category), class: "category-card-link" do %>
+        <div class="category-card">
+          <div>
+            <h1><%= category.name %></h1>
           </div>
-        </li>
+          <% if category.photo.attached? %>
+            <%= cl_image_tag category.photo.key %>
+          <% end %>
+        </div>
       <% end %>
     <% end %>
-  </ul>
 </div>
