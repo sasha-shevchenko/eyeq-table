@@ -1,12 +1,21 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: #FED060;
+.navbar-light {
+  background-color: #FED060;
+  padding: 0;
 }
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+    li {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+    }
 }
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.nav-item .avatar {
+  filter: invert(80%) sepia(17%) saturate(2138%) hue-rotate(345deg) brightness(88%) contrast(92%);
+  width: 30px;
 }

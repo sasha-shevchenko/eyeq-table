@@ -1,11 +1,17 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <a class="navbar-brand" href="#">
-    <%= image_tag("logo.svg") %>
-  </a>
-  <p class="nav-item">
-    <%= image_tag "table.svg", class:"avatar" %>
-  </p>
-  <a class="nav-item">
-    <%= image_tag "order.svg", class:"avatar" %>
-  </a>
-</div>
+<nav class="navbar navbar-light">
+  <ul>
+    <li class="nav-item">
+      <%= link_to restaurant_path(@current_session.restaurant) do %>
+        <%= image_tag "logo.svg", class:"avatar" %>
+      <% end %>
+    </li>
+    <li class="nav-item">
+      <h6><%= image_tag "table.svg", class:"avatar" %> - No°<%= @current_session.table.number %></h6>
+    </li>
+    <li class="nav-item">
+      <%= link_to session_items_path do %>
+        <%= image_tag "order.svg", class:"avatar" %>
+      <% end %>
+    </li>
+  </ul>
+</nav>
