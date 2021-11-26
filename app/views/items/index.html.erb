@@ -2,13 +2,13 @@
 <div class = "yellowbackground">
   <div class="top-card">
     <div class = "backtocat">
-    <%= link_to restaurant_categories_path(@category.restaurant) do %>
-    <i class="far fa-arrow-alt-circle-left arrowleft"></i>
-    <% end %>
-    <h1 class = backtocattext ><%= @category.name %></h1>
+      <%= link_to restaurant_categories_path(@category.restaurant) do %>
+        <i class="far fa-arrow-alt-circle-left arrowleft"></i>
+      <% end %>
+      <h1 class = backtocattext ><%= @category.name %></h1>
     </div>
     <div class="center catimgsize">
-    <%= cl_image_tag @category.photo.key %>
+      <%= cl_image_tag @category.photo.key %>
     </div>
   </div>
   <div class="item-index-card">
