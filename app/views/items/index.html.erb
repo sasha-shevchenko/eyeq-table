@@ -20,7 +20,7 @@
         <div class="item-info">
           <div><%= item.name %></div>
           <div>
-            <%= item.price %>
+            <%= item.price %> €
             <% if item.session_items.any? %>
               <%= button_to session_item_path(item.session_items.last), method: :delete do %>
                 <i class="fas fa-minus-circle"></i>
