@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  skip_before_action :authenticate_restaurant!, only: :index
   def index
     @category = Category.find(params[:category_id])
     @items = @category.items

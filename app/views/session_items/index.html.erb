@@ -1,15 +1,23 @@
 <%= render "shared/navbar" %>
-<div><h1>My Order</h1></div>
+<div class="backtocat">
+  <%= link_to restaurant_categories_path(@restaurant) do%>
+    <i class="far fa-arrow-alt-circle-left arrowleft"></i>
+    <% end %>
+  <h1 class="backtocattext">My Order</h1>
+</div>
 <div class="item-index-card">
   <% @current_session.items.distinct.each do |item| %>
     <div class="item-card">
       <div class="item-img">
+        <%= cl_image_tag item.photo.key %>
       </div>
       <div class="item-info">
         <div><%= item.name %></div>
-        <div><%= item.price * @current_session.session_items.where(item: item).count  %></div>
+        <div><%= item.price * @current_session.session_items.where(item: item).count  %>€</div>
       </div>
     </div>
   <% end %>
 </div>
-<div><button type="button" class="btn btn-success">Send Order | <%= @current_session.bill_total %></button></div>
+<div>
+<%= link_to "Send Order | #{@current_session.bill_total}", status_session_items_path, class: "btn btn-success" %>
+</div>
