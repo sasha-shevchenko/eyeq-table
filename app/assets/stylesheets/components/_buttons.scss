@@ -61,14 +61,21 @@
     .fa-facebook-f {
   color: white;
   margin-left: 5px;
+  text-decoration: none;
+      &:hover {
+        color: white;
+
+      }
   }
   .fa-instagram {
   color: white;
   margin-left: 10px;
+  text-decoration: none;
   }
   .leavereview {
   color: white;
   margin-left: 20px;
+  text-decoration: none;
   }
 }
 
