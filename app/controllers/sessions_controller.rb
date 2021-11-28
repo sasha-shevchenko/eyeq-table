@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
 
   def new
     @table = Table.find(params[:table_id])
-    if @current_session.nil? || @current_session.table_id != @table.id
+    if @current_session.done == true || @current_session.table_id != @table.id
       @session = Session.create(table: @table)
       cookies.signed[:session_id] = @session.id
     end
@@ -15,6 +15,6 @@ class SessionsController < ApplicationController
       @current_session.done = true
       @current_session.save!
     end
-    redirect_to status_session_items_path, notice: "Bill successfully requested!"
+    redirect_to closed_sessions_path, notice: "Bill successfully requested!"
   end
 end
