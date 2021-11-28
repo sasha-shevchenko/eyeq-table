@@ -1,0 +1,49 @@
+.navbar-light {
+  background-color: #FED060;
+  padding-bottom: 20px 0px;
+}
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+    li {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+    }
+}
+.nav-item .avatar {
+  filter: invert(80%) sepia(17%) saturate(2138%) hue-rotate(345deg) brightness(88%) contrast(92%);
+  width: 30px;
+}
+.nav-left {
+  padding-left: 15px;
+  display: flex;
+    h5 {
+      padding-top: 8px;
+      color: white;
+    }
+    img {
+      width: 40px;
+      margin-right: 7px;
+      filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(77deg) brightness(106%) contrast(101%);
+    }
+}
+
+.nav-right {
+  display: flex;
+    .overview-button {
+      margin-right: 20px;
+      padding-top: 5px;
+      color: white;
+      font-size: 17px;
+    }
+    .notifications {
+      font-size: 25px;
+      margin-right: 15px;
+      color: white;
+    }
+}
