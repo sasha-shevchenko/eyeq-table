@@ -9,4 +9,12 @@ class SessionsController < ApplicationController
     end
     redirect_to restaurant_path(@table.restaurant_id)
   end
+
+  def update
+    if @current_session.done == false
+      @current_session.done = true
+      @current_session.save!
+    end
+    redirect_to status_session_items_path, notice: "Bill successfully requested!"
+  end
 end

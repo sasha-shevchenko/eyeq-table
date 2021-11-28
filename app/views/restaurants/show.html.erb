@@ -25,7 +25,7 @@
 </div>
 
 <div>
-  <%= link_to "Request Bill", "#", class: "btn btn-flat-feedback justify-content-center center" %>
+  <%= link_to "Request Bill", table_session_path(@current_session, { done: true }), method: :patch, class: "btn btn-flat-feedback justify-content-center center" %>
 </div>
 
 
