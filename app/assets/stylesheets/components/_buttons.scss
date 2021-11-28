@@ -40,7 +40,7 @@
   text-align: center;
 }
 
-.btn-flat-social {
+.socials {
   color: white;
   // padding: 8px 24px;
   border-top-left-radius: 32px;
@@ -58,7 +58,20 @@
   bottom: 0px;
   width: 100%;
   text-align: center;
+    .fa-facebook-f {
+  color: white;
+  margin-left: 5px;
+  }
+  .fa-instagram {
+  color: white;
+  margin-left: 10px;
+  }
+  .leavereview {
+  color: white;
+  margin-left: 20px;
+  }
 }
+
 a {
   margin: 0 auto;
 
@@ -75,21 +88,6 @@ a {
   }
 }
 
-
 .dash-cat-buttons {
   text-align: end;
-}
-.fa-facebook-f {
-  color: white;
-  margin-left: 5px;
-}
-
-.fa-instagram {
-  color: white;
-  margin-left: 10px;
-}
-
-.leavereview {
-  color: white;
-  margin-left: 20px;
 }
