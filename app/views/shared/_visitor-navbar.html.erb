@@ -5,8 +5,8 @@
         <%= image_tag "logo.svg", class:"avatar" %>
       <% end %>
     </li>
-    <li class="nav-item">
-      <h6><%= image_tag "table.svg", class:"avatar" %> - No°<%= @current_session.table.number %></h6>
+    <li id="table-nav-item">
+      <h6><%= image_tag "table.svg", id:"avatar-center" %> - No°<%= @current_session.table.number %></h6>
     </li>
     <li class="nav-item">
       <%= link_to session_items_path do %>
