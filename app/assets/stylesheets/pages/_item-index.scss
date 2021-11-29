@@ -6,23 +6,43 @@ h1 {
   color: white;
   height: 190px;
 }
-.item-index-card {
+.arrow-left {
+  font-size: 30px;
+  margin-top: 8px;
+  margin-left: 10px;
+  color: white;
+}
+.back-to-cat {
+  display: flex;
+  margin-right: 100px;
+    h1 {
+      margin-right: 20px;
+      margin-left: 10px;
+    }
+}
+.yellow-background {
+  background-color: #FED060;
+}
+.cat-img-size img{
+  height: 130px;
+  width: 130px;
+  object-fit: contain;
+  display: block;
+  margin-left: 140px;
+  margin-right: auto;
+}
+.bottom-card {
   background-color: white;
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
   display: flex;
   flex-direction: column;
-}
-
-.arrowleft {
-  font-size:30px;
-  margin-top:8px;
-  color: white;
+  min-height: 100vh;
 }
 
 .item-card {
   background-color: white;
-  border: 1px solid rgba(128, 128, 128, 0.295);
+  border: 1px solid rgba(128, 128, 128, 0.11);
   border-radius: 32px;
   height: 140px;
   margin: 5px 7px;
@@ -33,33 +53,40 @@ h1 {
       justify-content: space-evenly;
       flex-grow: 1;
     }
+    img {
+      height: 110px;
+      width: 110px;
+      object-fit: contain;
+      margin-top: 15px;
+    }
 }
-
-.backtocattext {
-  margin-right: 20px;
+.item-info p {
+  font-size: 20px;
+  font-weight: bolder;
 }
-
-.backtocat {
+.price-quantity {
   display: flex;
-  margin-right: 100px;
+  justify-content: space-between;
+  align-items: center;
+  color: #FED060;
+  font-size: 20px;;
 }
-
-.yellowbackground {
-  background-color: #FED060;
-}
-
-.catimgsize img{
-  height: 130px;
-  width: 130px;
-  object-fit: contain;
-  display: block;
-  margin-left: 140px;
-  margin-right: auto;
-}
-
-.item-index-card img {
-  height: 100px;
-  width: 100px;
-  object-fit: contain;
-  margin-top: 15px;
+.quant-buttons {
+  display: flex;
+  margin-right: 20px;
+    button {
+      border: none;
+      background-color: white;
+    }
+    img {
+      width: 25px;
+      height: 25px;
+      border: none;
+      margin-top: 0px;
+    }
+    #quantity {
+      margin: 3px 10px 0px 10px;
+      color: black;
+      font-weight: bolder;
+    }
 }

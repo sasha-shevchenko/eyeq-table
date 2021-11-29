@@ -1,41 +1,47 @@
 <%= render "shared/visitor-navbar" %>
-<div class = "yellowbackground">
+<div class = "yellow-background">
   <div class="top-card">
-    <div class = "backtocat">
+    <div class = "back-to-cat">
       <%= link_to restaurant_categories_path(@category.restaurant) do %>
-        <i class="far fa-arrow-alt-circle-left arrowleft"></i>
+        <i class="far fa-arrow-alt-circle-left arrow-left"></i>
       <% end %>
-      <h1 class = backtocattext ><%= @category.name %></h1>
+      <h1 class = back-to-cat-text ><%= @category.name %></h1>
     </div>
-    <div class="center catimgsize">
+    <div class="center cat-img-size">
       <%= cl_image_tag @category.photo.key %>
     </div>
   </div>
-  <div class="item-index-card">
+  <div class="bottom-card">
     <% @items.each do |item| %>
       <div class="item-card">
         <div class="item-img">
           <%= cl_image_tag item.photo.key %>
         </div>
         <div class="item-info">
-          <div><%= item.name %></div>
-          <div>
-            <%= item.price %> €
-            <% if item.session_items.any? %>
-              <%= button_to session_item_path(item.session_items.last), method: :delete do %>
-                <i class="fas fa-minus-circle"></i>
+          <p><%= item.name %></p>
+          <div class="price-quantity">
+            <strong><%= item.price %> €</strong>
+            <div class="quant-buttons">
+              <% if @current_session.session_items.where(item: item).any? %>
+                <%= button_to session_item_path(item.session_items.last), method: :delete do %>
+                  <%= image_tag "minus.svg" %>
+                <% end %>
+              <% else %>
+                <%= button_to "", disabled: true do %>
+                  <%= image_tag "minus.svg" %>
+                <% end %>
               <% end %>
-            <% end %>
-            <%= @session_items_per_item[item.id] %>
-            <%= button_to item_session_items_path(item) do %>
-              <i class="fas fa-plus-circle"></i>
-            <% end %>
+              <div id="quantity"><%= @session_items_per_item[item.id] || 0 %></div>
+              <%= button_to item_session_items_path(item) do %>
+                <%= image_tag "plus.svg" %>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>
     <% end %>
-    <%= link_to session_items_path do %>
-      <button class="order-button">To my order</button>
+    <%= link_to session_items_path, class:"order-link" do %>
+      <button class="order-button">To my order | <%= @current_session.bill_total %>€</button>
     <% end %>
   </div>
 </div>

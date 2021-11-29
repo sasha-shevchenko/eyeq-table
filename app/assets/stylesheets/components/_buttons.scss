@@ -75,22 +75,30 @@
   }
 }
 
-a {
+.order-link {
   margin: 0 auto;
-
-  .order-button {
-    color: white;
-    padding: 8px 24px;
-    border: none;
-    border-radius: 32px;
-    background: #FED060;
-    transition: 0.3s ease;
-    text-decoration: bolder;
-    width: 180px;
-    height: 40px;
-  }
+  position: fixed;
+  bottom: 30px;
+  right: 55px;
+    .order-button {
+      color: white;
+      padding: 8px 24px;
+      border: none;
+      border-radius: 32px;
+      background: #FED060;
+      transition: 0.3s ease;
+      text-decoration: bolder;
+      width: 250px;
+      height: 50px;
+    }
 }
 
 .dash-cat-buttons {
   text-align: end;
+}
+
+.back-button {
+  background-color: #FED060;
+  margin-bottom: -25px;
+  height: 70px;
 }
