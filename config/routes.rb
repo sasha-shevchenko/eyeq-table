@@ -27,7 +27,7 @@ Rails.application.routes.draw do
     resources :sessions, only: [:new, :update]
   end
 
-  resources :sessions, only: [:new, :update] do
+  resources :sessions, only: [] do
     collection do
       get "closed", as: :closed
     end
