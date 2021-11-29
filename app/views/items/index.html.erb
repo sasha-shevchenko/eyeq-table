@@ -22,12 +22,16 @@
           <div class="price-quantity">
             <strong><%= item.price %> €</strong>
             <div class="quant-buttons">
-              <% if item.session_items.any? %>
+              <% if @current_session.session_items.where(item: item).any? %>
                 <%= button_to session_item_path(item.session_items.last), method: :delete do %>
                   <%= image_tag "minus.svg" %>
                 <% end %>
+              <% else %>
+                <%= button_to "", disabled: true do %>
+                  <%= image_tag "minus.svg" %>
+                <% end %>
               <% end %>
-              <div id="quantity"><%= @session_items_per_item[item.id] %></div>
+              <div id="quantity"><%= @session_items_per_item[item.id] || 0 %></div>
               <%= button_to item_session_items_path(item) do %>
                 <%= image_tag "plus.svg" %>
               <% end %>
