@@ -60,9 +60,17 @@ h1 {
       margin-top: 15px;
     }
 }
-.item-info p {
-  font-size: 20px;
-  font-weight: bolder;
+.item-card-link {
+  &:hover {
+  text-decoration: none;
+  }
+}
+.item-info {
+  p {
+    font-size: 20px;
+    font-weight: bolder;
+    color: black;
+  }
 }
 .price-quantity {
   display: flex;
