@@ -71,8 +71,14 @@ h1 {
   display: flex;
   margin-right: 20px;
     button {
-      background-color: white;
       border: none;
+      background-color: white;
+    }
+    img {
+      width: 25px;
+      height: 25px;
+      border: none;
+      margin-top: 0px;
     }
     #quantity {
       margin: 3px 10px 0px 10px;
