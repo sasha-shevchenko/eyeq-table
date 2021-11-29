@@ -3,11 +3,11 @@
     <div class="top-card-checkout">
       <div class="backtocat">
         <%= link_to restaurant_categories_path(@restaurant) do%>
-          <i class="far fa-arrow-alt-circle-left arrow-left"></i>
+          <i class="far fa-arrow-alt-circle-left arrow-left-order"></i>
           <% end %>
-        <strong><h1>My Order</h1></strong>
       </div>
     </div>
+    <div class="checkout-card"><strong><h1>My Order</h1></strong></div>
     <div class="item-index-card">
       <% @current_session.items.distinct.each do |item| %>
         <div class="item-card">
@@ -35,7 +35,14 @@
     <div>
     </div>
 </div>
+<<<<<<< HEAD
 
 <%= link_to(session_items_session_path(@current_session), method: :patch, class:"order-link") do %>
   <button class="order-button">Send Order | <%= @current_session.bill_total %> €</button>
 <% end %>
+=======
+<div class="blank-card"></div>
+<%= link_to status_session_items_path, class:"order-link" do %>
+      <button class="order-button">Send Order | <%= @current_session.bill_total %> €</button>
+    <% end %>
+>>>>>>> b67a535bb49a6694ba25e2d6039d9ead85e9f335
