@@ -7,16 +7,18 @@ h1 {
   height: 190px;
 }
 .arrow-left {
-  font-size:30px;
-  margin-top:8px;
+  font-size: 30px;
+  margin-top: 8px;
+  margin-left: 10px;
   color: white;
-}
-.back-to-cat-text {
-  margin-right: 20px;
 }
 .back-to-cat {
   display: flex;
   margin-right: 100px;
+    h1 {
+      margin-right: 20px;
+      margin-left: 10px;
+    }
 }
 .yellow-background {
   background-color: #FED060;

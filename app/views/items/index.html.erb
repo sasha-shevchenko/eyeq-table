@@ -41,7 +41,7 @@
       </div>
     <% end %>
     <%= link_to session_items_path, class:"order-link" do %>
-      <button class="order-button">To my order</button>
+      <button class="order-button">To my order | <%= @current_session.bill_total %>€</button>
     <% end %>
   </div>
 </div>
