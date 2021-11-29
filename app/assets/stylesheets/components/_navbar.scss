@@ -4,16 +4,32 @@
 }
 .navbar ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   list-style: none;
   width: 100%;
   margin: 0;
   padding: 0;
-    li {
-      display: inline-block;
-      margin: 0;
-      padding: 0;
+  li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    color: #D9A321;
+
+  }
+
+  #table-nav-item {
+    position: absolute;
+    left: 170px;
+    h6 {
+      text-decoration: none;
+      color: #D9A321;
     }
+    #avatar-center {
+      width: 30px;
+      filter: invert(80%) sepia(17%) saturate(2138%) hue-rotate(345deg) brightness(88%) contrast(92%);
+    }
+  }
 }
 .nav-item .avatar {
   filter: invert(80%) sepia(17%) saturate(2138%) hue-rotate(345deg) brightness(88%) contrast(92%);
