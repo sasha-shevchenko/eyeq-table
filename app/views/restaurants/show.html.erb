@@ -25,20 +25,24 @@
 </div>
 
 <div>
-  <%= link_to "Request Bill", table_session_path(@current_session, { done: true }), method: :patch, class: "btn btn-flat-feedback justify-content-center center" %>
+  <%= link_to "Request Bill", table_session_path(@current_session.table, @current_session, { done: true }), method: :patch, class: "btn btn-flat-feedback justify-content-center center" %>
 </div>
 
 
-<div href="#"class = "socials">
+<div class = "socials">
   <div class = "d-flex socialcontent">
     <div>
-      <a href="https://www.facebook.com/La-Esquinica-101672334910097/" class="fab fa-facebook-f"></a>
+      <%= link_to @restaurant.facebook_url do %>
+      <i class="fab fa-facebook-f"></i>
+      <% end %>
     </div>
     <div>
-      <a href="https://www.instagram.com/laesquinica/?hl=es" class="fab fa-instagram"></a>
+      <%= link_to @restaurant.instagram_url do %>
+      <i class="fab fa-instagram"></i>
+      <% end %>
     </div>
     <div>
-      <a href="https://www.tripadvisor.com/UserReviewEdit-g187497-d877654-La_Esquinica-Barcelona_Catalonia.html" class="leavereview">Leave Review!</a>
+      <%= link_to "Leave Review!", @restaurant.tripadvisor_url, class: "leavereview" %>
       <!-- <i class="fas fa-arrow-right"></i> do we need an arrow? -->
     </div>
   </div>
