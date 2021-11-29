@@ -14,6 +14,10 @@
   border-top-right-radius: 32px;
   text-decoration: none;
   color: white;
+    &:hover {
+      text-decoration: none;
+      color: white;
+    }
     h1 {
       padding-left: 25px;
       padding-top: 10px;
@@ -38,7 +42,7 @@
 
 .category-card img {
   height: 130px;
-  width: 130px;
+  width: 230px;
   float: right;
   object-fit: contain;
   padding-right: 30px;

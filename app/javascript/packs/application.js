@@ -20,6 +20,12 @@ import "controllers"
 
 // External imports
 import "bootstrap";
+import { Application } from "stimulus"
+import { definitionsFromContext } from "stimulus/webpack-helpers"
+
+const application = Application.start()
+const context = require.context("./controllers", true, /\.js$/)
+application.load(definitionsFromContext(context))
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -28,3 +34,5 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
 });
+
+import "controllers"
