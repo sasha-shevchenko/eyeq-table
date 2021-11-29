@@ -13,35 +13,36 @@
   </div>
   <div class="bottom-card">
     <% @items.each do |item| %>
-      <div class="item-card">
-        <div class="item-img">
+      <%= link_to "#", class:"item-card-link", data: { toggle: 'modal', target: "#item-show-#{item.id}"} do %>
+        <div class="item-card">
           <%= cl_image_tag item.photo.key %>
-        </div>
-        <div class="item-info">
-          <p><%= item.name %></p>
-          <div class="price-quantity">
-            <strong><%= item.price %> €</strong>
-            <div class="quant-buttons">
-              <% if @current_session.session_items.where(item: item).any? %>
-                <%= button_to session_item_path(item.session_items.last), method: :delete do %>
-                  <%= image_tag "minus.svg" %>
+          <div class="item-info">
+            <p><%= item.name %></p>
+            <div class="price-quantity">
+              <strong><%= item.price %> €</strong>
+              <div class="quant-buttons">
+                <% if @current_session.session_items.where(item: item).any? %>
+                  <%= button_to session_item_path(item.session_items.last), method: :delete do %>
+                    <%= image_tag "minus.svg" %>
+                  <% end %>
+                <% else %>
+                  <%= button_to "", disabled: true do %>
+                    <%= image_tag "minus.svg" %>
+                  <% end %>
                 <% end %>
-              <% else %>
-                <%= button_to "", disabled: true do %>
-                  <%= image_tag "minus.svg" %>
+                <div id="quantity"><%= @session_items_per_item[item.id] || 0 %></div>
+                <%= button_to item_session_items_path(item) do %>
+                  <%= image_tag "plus.svg" %>
                 <% end %>
-              <% end %>
-              <div id="quantity"><%= @session_items_per_item[item.id] || 0 %></div>
-              <%= button_to item_session_items_path(item) do %>
-                <%= image_tag "plus.svg" %>
-              <% end %>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    <% end %>
-    <%= link_to session_items_path, class:"order-link" do %>
-      <button class="order-button">To my order | <%= @current_session.bill_total %>€</button>
+      <% end %>
+      <%= render "shared/item-show-modal", item: item %>
     <% end %>
   </div>
+  <%= link_to session_items_path, class:"order-link" do %>
+    <button class="order-button">To my order | <%= @current_session.bill_total %>€</button>
+  <% end %>
 </div>
