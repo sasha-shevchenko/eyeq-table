@@ -19,8 +19,11 @@ puts "creating database ... "
 @la_esquinica = Restaurant.create!(
   name: "La Esquinica", # means "corner of the street" in Spanish:)
   email: "la-esquinica@tapasmail.com",
+  cuisine: "Spanish",
   password: "password",
-  cuisine: "Spanish"
+  instagram_url: "https://www.instagram.com/laesquinica/?hl=es",
+  facebook_url: "https://www.facebook.com/La-Esquinica-101672334910097/",
+  tripadvisor_url: "https://www.tripadvisor.com/UserReviewEdit-g187497-d877654-La_Esquinica-Barcelona_Catalonia.html"
 )
 
 # Restaurant tables seeds
@@ -252,7 +255,7 @@ file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637924918/e
 pumpkin_soup.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 ham_and_cheese = Item.create!(
-  name: "Plate with Ham & Cheese",
+  name: "Ham & Cheese",
   description: "A rich charcuterie plate with Salami, Prosciutto, Blue Cheese, Brie & Olives. Goes perfectly hand in hand with our tapas bread!",
   price: 3.00,
   category: tapas
