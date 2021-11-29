@@ -24,7 +24,13 @@ Rails.application.routes.draw do
   root to: 'dashboards#show'
 
   resources :tables, only: [] do
-    resources :sessions, only: :new
+    resources :sessions, only: [:new, :update]
+  end
+
+  resources :sessions, only: [:new, :update] do
+    collection do
+      get "closed", as: :closed
+    end
   end
 
   # resources :categories, only: [:create, :destroy] do
