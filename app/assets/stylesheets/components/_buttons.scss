@@ -1,20 +1,20 @@
-.btn-flat-request {
-  color: white;
-  padding: 8px 24px;
-  border-radius: 20px;
-  background: #FED060;
-  transition: 0.3s ease;
-  margin-top: 110px;
-  text-decoration: bolder;
-  width: 160px;
-  height: 40px;
-}
+// .btn-flat-feedback {
+//   color: white;
+//   padding: 8px 24px;
+//   border-radius: 20px;
+//   background: #FED060;
+//   transition: 0.3s ease;
+//   margin-top: 110px;
+//   text-decoration: bolder;
+//   width: 160px;
+//   height: 40px;
+// }
 
 .btn-flat-menu {
   color: white;
   padding: 8px 24px;
   border-radius: 20px;
-  background: #FB5E5E;
+  background: #FED060;
   transition: 0.3s ease;
   margin-top: 20px;
   height: 70px;
@@ -22,13 +22,14 @@
   justify-content: center;
   align-items: center;
   font-size: 35px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.btn-flat-feedback {
+.btn-flat-request {
   color: white;
   padding: 8px 24px;
   border-radius: 20px;
-  background: #C1D649;
+  background: #A8E8E8;
   transition: 0.3s ease;
   margin-top: 10px;
   text-decoration: bolder;
@@ -38,6 +39,7 @@
   align-items: center;
   font-size: 35px;
   text-align: center;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .socials {
@@ -45,8 +47,7 @@
   // padding: 8px 24px;
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
-  background: #A8E8E8;
-  margin-top: 12px;
+  background: #FED060;
   text-decoration: bolder;
   width: 300px;
   height: 120px;
@@ -60,22 +61,17 @@
   text-align: center;
     .fa-facebook-f {
   color: white;
-  margin-left: 5px;
-  text-decoration: none;
-      &:hover {
-        color: white;
-
-      }
+  font-size: 25px;
   }
   .fa-instagram {
   color: white;
-  margin-left: 10px;
-  text-decoration: none;
+  margin-left: 30px;
+  font-size: 25px;
   }
   .leavereview {
   color: white;
-  margin-left: 20px;
-  text-decoration: none;
+  margin-left: 9px;
+  font-size: 20px;
   }
 }
 

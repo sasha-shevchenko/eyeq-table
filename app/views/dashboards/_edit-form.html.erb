@@ -2,6 +2,7 @@
   <button data-action="click->hide-form#toggleForm">Update Restaurant Details</button>
   <%= simple_form_for current_restaurant, html: { class: 'd-none', data: { hide_form_target: 'form' } } do |f| %>
     <%= f.input :name %>
+    <%= f.input :cuisine %>
     <%= f.input :instagram_url %>
     <%= f.input :facebook_url %>
     <%= f.input :tripadvisor_url %>

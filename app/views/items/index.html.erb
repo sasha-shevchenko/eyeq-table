@@ -37,12 +37,14 @@
               </div>
             </div>
           </div>
-        </div>
+         </div>
+         <% end %>
+         <%= render "shared/item-show-modal", item: item %>
       <% end %>
-      <%= render "shared/item-show-modal", item: item %>
+     </div>
+    <div class="blank-card"></div>
+    <%= link_to session_items_path, class:"order-link" do %>
+      <button class="order-button">To my order | <%= @current_session.bill_total %>€</button>
     <% end %>
   </div>
-  <%= link_to session_items_path, class:"order-link" do %>
-    <button class="order-button">To my order | <%= @current_session.bill_total %>€</button>
-  <% end %>
 </div>
