@@ -31,13 +31,15 @@ h1 {
   margin-left: 140px;
   margin-right: auto;
 }
-.item-index-card {
+.bottom-card {
   background-color: white;
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
+
 .item-card {
   background-color: white;
   border: 1px solid rgba(128, 128, 128, 0.11);
