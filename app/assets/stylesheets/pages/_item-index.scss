@@ -6,6 +6,11 @@ h1 {
   color: white;
   height: 190px;
 }
+.top-card-checkout{
+  background-color: #FED060;
+  color: white;
+  height: 60px;
+}
 .arrow-left {
   font-size: 30px;
   margin-top: 8px;
@@ -15,6 +20,14 @@ h1 {
 .back-to-cat {
   display: flex;
   margin-right: 100px;
+    h1 {
+      margin-right: 20px;
+      margin-left: 10px;
+    }
+}
+.backtocat {
+  display: flex;
+  flex-wrap: nowrap | wrap | wrap-reverse;
     h1 {
       margin-right: 20px;
       margin-left: 10px;
