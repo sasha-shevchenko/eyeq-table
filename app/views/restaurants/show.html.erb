@@ -52,8 +52,9 @@
       <% end %>
     </div>
   </div>
-    <div>
-      <%= link_to "Leave Review!", @restaurant.tripadvisor_url, class: "leavereview", class: "far fa-arrow-alt-circle-right" %>
-      <!-- <i class="fas fa-arrow-right"></i> do we need an arrow? -->
+  <div>
+    <%= link_to @restaurant.tripadvisor_url do %>
+    <p class="leavereview">Leave Review <i class="far fa-arrow-alt-circle-right"></i></p>
+    <% end %>
   </div>
 </div>
