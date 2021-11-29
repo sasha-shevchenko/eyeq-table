@@ -10,7 +10,14 @@ class SessionItemsController < ApplicationController
     @item = Item.find(params[:item_id])
     @session_item = SessionItem.create(session: @current_session, item: @item, quantity: 1)
     if @session_item.save
-      redirect_back(fallback_location: session_items_path)
+      respond_to do |format|
+        format.html {
+          redirect_back(fallback_location: session_items_path)
+         }
+         format.json {
+          render json: { status: 200 }
+         }
+      end
     end
   end
 
