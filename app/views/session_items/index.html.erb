@@ -20,7 +20,7 @@
     <div class="item-info">
           <p><%= item.name %></p>
           <div class="price-quantity">
-            <strong><%= item.price * session_items.count  %> €</strong>
+            <strong><%= number_to_currency(item.price * session_items.count, locale: :es)  %> </strong>
             <div class="quant-buttons">
               <%= button_to session_item_path(item.session_items.last), method: :delete do %>
                 <%= image_tag "minus.svg" %>
@@ -56,5 +56,5 @@
 
 <div class="blank-card"></div>
 <%= link_to(session_items_session_path(@current_session), method: :patch, class:"order-link") do %>
-  <button class="order-button">Send Order | <%= @current_session.order_total %> €</button>
+  <button class="order-button">Send Order | <%= number_to_currency(@current_session.order_total, locale: :es) %> </button>
 <% end %>

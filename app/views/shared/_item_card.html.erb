@@ -5,7 +5,7 @@
         <div class="item-info">
           <p><%= item.name %></p>
           <div class="price-quantity">
-            <strong><%= item.price %> €</strong>
+            <strong><%= number_to_currency(item.price, locale: :es) %></strong>
             <div class="quant-buttons">
               <% if @current_session.session_items.where(item: item).any? %>
                 <%= button_to session_item_path(item.session_items.last), method: :delete do %>
