@@ -7,41 +7,46 @@
   <% @categories.each do |category| %>
     <div class="dash-category-card">
       <h3><%= category.name %></h3>
-      <div class="dash-item-list">
-        <ul class = >
+      <div class="dash-item-list row row-cols-1 row-cols-md-3">
           <% category.items.each do |item| %>
-            <div class = "card d-flex">
-              <li class = "d-flex justify-content-between">
-                <strong><%= item.name %></strong>
-                <strong><%= item.price %>€</strong>
-              </li>
-              <%= item.description %>
-              <li class = "d-flex">
-                <%= link_to item_path(item), method: :delete, data: { confirm: "Are you sure you want to delete?" } do %>
-                  <i class="far fa-trash-alt"></i>
-                <% end %> -
-                <%= link_to edit_category_item_path(category, item) do %>
-                  <i class="far fa-edit"></i>
-                <% end %>
-              </li>
+            <div class = "card">
+              <div class = "dashboard-img"><%= cl_image_tag item.photo.key %></div>
+              <div class = "d-flex item-name-price">
+                <div><strong><%= item.name %></strong></div>
+                <div><strong><%= item.price %> €</strong></div>
+              </div>
+              <div class ="item-description-format"><%= item.description %></div>
+              <ul class = "item-buttons">
+                <li class = "d-flex justify-content-lg-center">
+                  <%= link_to edit_category_item_path(category, item) do %>
+                    <button type= "button" class = "btn btn-change-item"><i class="fas fa-edit"></i> Change Item</button>
+                  <% end %>
+                  <%= link_to item_path(item), method: :delete, data: { confirm: "Are you sure you want to delete?" } do %>
+                    <button type= "button" class = "btn btn-del-item"><i class="fas fa-times"></i> Delete Item</button>
+                  <% end %>
+                </li>
+              </ul>
             </div>
           <% end %>
-        </ul>
       </div>
       <div class="dash-cat-buttons">
-        <%= link_to category_path(category), method: :delete, data: { confirm: "Are you sure you want to delete?" } do %>
-          <button type="button" class="btn btn-warning">Delete Category</button>
-        <% end %>
         <%= link_to new_category_item_path(category) do %>
-          <button type="button" class="btn btn-info">Add Item</button>
+          <button type="button" class="btn btn-info"><i class="fas fa-plus"></i> Add Item</button>
+        <% end %>
+        <%= link_to category_path(category), method: :delete, data: { confirm: "Are you sure you want to delete?" } do %>
+          <button type="button" class="btn btn-warning"><i class="fas fa-times"></i> Delete Category</button>
         <% end %>
       </div>
     </div>
   <% end %>
+  <h4>Create New Category</h4>
   <div class="add-category">
     <%= simple_form_for Category.new do |f| %>
-      <%= f.input :name %>
-      <%= f.button :submit, class: "btn btn-success"%>
+      <div></div>
+      <div>
+        <div><%= f.input :name %></div>
+        <div><%= f.button :submit, class: "btn btn-create-category"%></div>
+      </div>
     <% end %>
   </div>
 </div>

@@ -3,8 +3,8 @@
   margin: 0 auto;
 }
 .dash-item-list{
-  li {
-    margin: 7px;
+  li{
+    margin: 0px;
       .far {
         color: #D9A321;
       }
@@ -20,4 +20,60 @@
   margin: auto;
   text-align: center;
   font-family: arial;
+  width: 120px;
+  height: 320px;
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  border: none;
+}
+
+.card img {
+  height: 130px;
+  object-fit: contain;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.item-description-format{
+  padding: 10px;
+}
+
+.item-buttons {
+  padding: 0px;
+  margin: 0px;
+}
+
+.item-name-price {
+  padding: 0px;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.row {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.update-restaurant-background {
+  background-color: #FFF0CD;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+// .form-group {
+// }
+
+.edit-item-body {
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+  margin-top: 15px;
+}
+
+.edit-item {
+  background-color: #FFF0CD;
+  width: 100%;
+  border-radius: 5px;
+  padding: 48px;
 }
