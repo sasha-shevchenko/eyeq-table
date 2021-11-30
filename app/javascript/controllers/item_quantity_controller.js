@@ -20,7 +20,6 @@ export default class extends Controller {
         .then((data) => {
           const price = Number.parseFloat(this.priceTarget.innerHTML.replace(",", "."))
           const updateOrderPriceEvent = new CustomEvent("updated-order", {detail: {price: price} })
-
           window.dispatchEvent(updateOrderPriceEvent)
           this.element.outerHTML = data;
         })
@@ -39,6 +38,9 @@ export default class extends Controller {
       })
       .then(response => response.text())
       .then((data) => {
+        const price = Number.parseFloat(this.priceTarget.innerHTML.replace(",", "."))
+        const updateOrderPriceEvent = new CustomEvent("updated-order", {detail: {price: -price} })
+        window.dispatchEvent(updateOrderPriceEvent)
         this.element.outerHTML = data;
       })
     }
