@@ -6,9 +6,25 @@
   </div>
   <div class="bottom-card">
     <%= render 'shared/carousel' %>
-    <button class="menu-button">Go to menu</button>
-    <p>Suggested Combos</p>
+    <%= link_to restaurant_categories_path(@restaurant) do %>
+      <button class="menu-button">Go to menu</button>
+    <% end %>
+    <h4>Suggested Combos</h4>
     <div class="combos">
+      <div class="combo-card"></div>
+        <img class="pulpo" src="http://res.cloudinary.com/dwonn5etb/image/upload/v1/development/tfa7tf0r6axzcxaloft0ln28qzfe">
+        <p>Fried Calamari</p>
+      </div>
+      <p><i class="fas fa-plus"></i></p>
+      <div class="combo-card"></div>
+        <img class="pulpo" src="http://res.cloudinary.com/dwonn5etb/image/upload/v1/development/tfa7tf0r6axzcxaloft0ln28qzfe">
+        <p>Fried Calamari</p>
+      </div>
+      <p><i class="fas fa-plus"></i></p>
+      <div class="combo-card"></div>
+        <img class="pulpo" src="http://res.cloudinary.com/dwonn5etb/image/upload/v1/development/tfa7tf0r6axzcxaloft0ln28qzfe">
+        <p>Fried Calamari</p>
+      </div>
     </div>
   </div>
   <div class = "socials">
