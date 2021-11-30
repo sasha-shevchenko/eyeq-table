@@ -52,3 +52,4 @@ class SessionItemsController < ApplicationController
   def status
   end
 end
+
