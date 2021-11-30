@@ -1,9 +1,15 @@
-.welcometext {
-  font-size: 25px;
-  font-weight: bolder;
-  color: #b5043d;
-  text-align: center;
-  margin-top: 20px;
+.rest-top-card {
+    h2 {
+      text-align: center;
+      color: white;
+    }
+    .avatar {
+      display: block;
+      margin: 0 auto;
+      width: 115px;
+      height: 115px;
+      margin-bottom: -50px;
+    }
 }
 
 .margintop {
@@ -19,6 +25,9 @@
 
 .carousel-inner {
   height: 230px;
+}
+.carousel {
+  margin-top: 50px;
 }
 
 // .highlightsize {
@@ -37,7 +46,7 @@
 
 .papassize {
   margin: -50px 0 0 -50;
-  height: 160px;
+  height: 140px;
   margin-top: 40px;
 }
 
