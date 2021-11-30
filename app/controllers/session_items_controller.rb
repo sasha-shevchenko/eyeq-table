@@ -4,6 +4,9 @@ class SessionItemsController < ApplicationController
   def index
     @session_items = @current_session.session_items
     @restaurant = @current_session.restaurant
+
+    @ordered_items = @current_session.session_items.where(sent_to_kitchen: true).group_by{ |session_item| session_item.item_id }
+    @unordered_items = @current_session.session_items.where(sent_to_kitchen: false).group_by{ |session_item| session_item.item_id }
   end
 
   def create
@@ -17,7 +20,7 @@ class SessionItemsController < ApplicationController
         format.text {
           render(
             partial: 'shared/item_card',
-            locals: { item: @session_item.item },
+            locals: { item: @session_item.item, item_quantity: @current_session.session_items.where(sent_to_kitchen: false, item_id: @item.id).count },
             formats: [:html]
           )
         }
@@ -30,10 +33,11 @@ class SessionItemsController < ApplicationController
     @current_session.session_items
     # update the sent_to_kitchen boolean to true for all the items
     @current_session.session_items.each do |session_item|
-      session_item.sent_to_kitchen = true
+      session_item.update(sent_to_kitchen: true)
     end
-    # redirect to status_session_items_path
-    redirect_to status_session_items_path
+
+    # redirect_to status_session_items_path
+    redirect_to restaurant_path(@current_session.restaurant)
   end
 
   def destroy
@@ -47,7 +51,7 @@ class SessionItemsController < ApplicationController
     if @session_item.destroy
       render(
         partial: 'shared/item_card',
-        locals: { item: @session_item.item },
+        locals: { item: @session_item.item, item_quantity: @current_session.session_items.where(sent_to_kitchen: false, item_id: @session_item.item_id).count },
         formats: [:html]
       )
     end

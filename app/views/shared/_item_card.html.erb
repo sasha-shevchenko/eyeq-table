@@ -4,7 +4,7 @@
       <div class="item-info">
         <p><%= item.name %></p>
         <div class="price-quantity">
-          <strong><%= item.price %> €</strong>
+          <strong><%= number_to_currency(item.price, locale: :es) %></strong>
           <div class="quant-buttons">
             <% if @current_session.session_items.where(item: item).any? %>
               <%= button_to session_item_path(item.session_items.last), method: :delete, remote: true, data: { action: "click->item-quantity#deleteSessionItem", "delete-url":  session_item_path(item.session_items.last) } do %>
@@ -16,7 +16,7 @@
               <% end %>
             <% end %>
             <div class="quantity" data-item-quantity-target="quantity">
-              <%= @current_session.session_items.where(item: item).count %>
+              <%= item_quantity %>
             </div>
             <%= button_to item_session_items_path(item), remote: true, data: { action: "click->item-quantity#createSessionItem" } do %>
               <%= image_tag "plus.svg" %>

@@ -97,7 +97,7 @@ agua.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 coca_cola = Item.create!(
   name: "Coca-Cola (33cl)",
-  description: "No need for a description. Everyone knows what Coca-Cola is.. Have you been living under a rock?",
+  description: "No need for a description. Everyone knows what Coca-Cola is...",
   price: 2.95,
   category: beverages
 )
@@ -140,6 +140,15 @@ espresso = Item.create!(
 file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637923305/eyeqtable/espresso_xpklds.png')
 espresso.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
+clara = Item.create!(
+  name: "Damm Lemon (33cl)",
+  description: "One of the greatest Spanish inventions - the Lemon Beer.",
+  price: 4.15,
+  category: beverages
+)
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637923306/eyeqtable/clara_qoba3a.png')
+clara.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
 estrella = Item.create!(
   name: "Estrella Cerveza (33cl)",
   description: "Bottle of Estrella... research has shown that one will probably not be enough for you.",
@@ -148,15 +157,6 @@ estrella = Item.create!(
 )
 file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637923306/eyeqtable/estrella_b0b0oa.png')
 estrella.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
-
-clara = Item.create!(
-  name: "Clara",
-  description: "One of the greatest Spanish inventions - the Lemon Beer. A surprising combination you wouldn't expect to work that well together!",
-  price: 4.15,
-  category: beverages
-)
-file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637923306/eyeqtable/clara_qoba3a.png')
-clara.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 # Menu category - Wine List seeds
 
@@ -171,7 +171,7 @@ white_wine.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png'
 
 red_wine = Item.create!(
   name: "House Wine (red)",
-  description: "Glass of Red Wine with notes of vanilla and an intense black cherry aroma. You will probably deeply regret the 5th glass tomorrow",
+  description: "Glass of Red Wine with notes of vanilla and an intense black cherry aroma.",
   price: 5.50,
   category: wine_list
 )
@@ -180,7 +180,7 @@ red_wine.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 rose_wine = Item.create!(
   name: "Rosé Wine",
-  description: "Le Grand Noir Rosé. A sweet sparkling rosé wine with a subtle hint of spice. Great choice to get drunk on.",
+  description: "Le Grand Noir Rosé. A sweet sparkling rosé wine with a subtle hint of spice.",
   price: 5.00,
   category: wine_list
 )
@@ -190,7 +190,7 @@ rose_wine.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 # Menu category - Bocadillo seeds
 
 tuna_bocadillo = Item.create!(
-  name: "Tuna Bocadillo",
+  name: "Tuna",
   description: "Seed bread, Tuna, Lettuce mix, Tomato, Eggs, Red Onion. Yummy!",
   price: 3.50,
   category: bocadillos
@@ -199,7 +199,7 @@ file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637923307/e
 tuna_bocadillo.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 ham_tomato_bocadillo = Item.create!(
-  name: "Ham & Tomato Bocadillo",
+  name: "Ham & Tomato",
   description: "Crispy bread, Tomato, Olive oil, Iberian ham. We bet your tummy’s rumbling...",
   price: 3.00,
   category: bocadillos
@@ -208,7 +208,7 @@ file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637923306/e
 ham_tomato_bocadillo.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 ham_cheese_bocadillo = Item.create!(
-  name: "Ham & Cheese Bocadillo",
+  name: "Ham & Cheese",
   description: "Provençal bread, Serrano ham, Brie cheese, Rocket, Olive oil. Wicked!",
   price: 3.00,
   category: bocadillos
@@ -220,7 +220,7 @@ ham_cheese_bocadillo.photo.attach(io: file, filename: 'nes.png', content_type: '
 
 patatasbravas = Item.create!(
   name: "Patatas Bravas",
-  description: "No greater crowdpleaser than a plate of deep-fried potatoes. A must for any tapas dinner.",
+  description: "No greater crowdpleaser than a plate of deep-fried potatoes.",
   price: 3.95,
   category: tapas
 )
@@ -229,7 +229,7 @@ patatasbravas.photo.attach(io: file, filename: 'nes.png', content_type: 'image/p
 
 mushrooms = Item.create!(
   name: "Mushrooms",
-  description: "A plate of Mushrooms sauteed in garlic butter with a dash of soy sauce for an extraordinary culinary experience.",
+  description: "A plate of Mushrooms sauteed in garlic butter with a dash of soy sauce.",
   price: 3.75,
   category: tapas
 )
@@ -238,7 +238,7 @@ mushrooms.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 fried_calamari = Item.create!(
   name: "Fried Calamari",
-  description: "Squid quickly deep fried to golden perfection. Served with a hot splash of citrus and spicy Marinara Sauce",
+  description: "Squid quickly deep fried to golden perfection.",
   price: 4.15,
   category: tapas
 )
@@ -247,7 +247,7 @@ fried_calamari.photo.attach(io: file, filename: 'nes.png', content_type: 'image/
 
 pumpkin_soup = Item.create!(
   name: "Pumpkin Soup",
-  description: "Delicious creamy Pumpkin Soup with Potatoes, Carrots, dried Cranberries and Pepitas for crunch.",
+  description: "Creamy Pumpkin Soup with Potatoes, Carrots, Cranberries and Pepitas for crunch.",
   price: 2.50,
   category: tapas
 )
@@ -256,7 +256,7 @@ pumpkin_soup.photo.attach(io: file, filename: 'nes.png', content_type: 'image/pn
 
 ham_and_cheese = Item.create!(
   name: "Ham & Cheese",
-  description: "A rich charcuterie plate with Salami, Prosciutto, Blue Cheese, Brie & Olives. Goes perfectly hand in hand with our tapas bread!",
+  description: "A rich charcuterie plate with Salami, Prosciutto, Blue Cheese, Brie & Olives.",
   price: 3.00,
   category: tapas
 )
@@ -265,7 +265,7 @@ ham_and_cheese.photo.attach(io: file, filename: 'nes.png', content_type: 'image/
 
 bread = Item.create!(
   name: "Bread",
-  description: "Our crusty fresh-out-of-the-oven tapas bread. This is what heaven in bread form tastes like.",
+  description: "Our crusty fresh-out-of-the-oven tapas bread.",
   price: 1.50,
   category: tapas
 )
@@ -274,7 +274,7 @@ bread.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 croqueta_pollo = Item.create!(
   name: "Croqueta de Pollo",
-  description: "3 pieces. Crispy creamy Chicken Croquettes. The ideal comfort food.",
+  description: "3 Pieces. Crispy creamy Chicken Croquettes. The ideal comfort food.",
   price: 3.25,
   category: tapas
 )
@@ -283,7 +283,7 @@ croqueta_pollo.photo.attach(io: file, filename: 'nes.png', content_type: 'image/
 
 chorizo = Item.create!(
   name: "Chorizo",
-  description: "7 pieces. These spicy sausages in rich glaze of garlic, honey and red wine are sure to disappear quickly from your tapas spread.",
+  description: "7 pieces. Spicy sausages in rich glaze of garlic, honey and red wine.",
   price: 4.50,
   category: tapas
 )
@@ -303,7 +303,7 @@ donut.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 crema_catalana = Item.create!(
   name: "Crema Catalana",
-  description: "A burnt custard dessert flavored with orange, lemon and a hint of cinnamon. First time in Barcelona? This is a must-try!",
+  description: "A burnt custard dessert flavored with orange, lemon and a hint of cinnamon.",
   price: 4.15,
   category: desserts
 )
@@ -312,7 +312,7 @@ crema_catalana.photo.attach(io: file, filename: 'nes.png', content_type: 'image/
 
 cheesecake = Item.create!(
   name: "Cheesecake",
-  description: "This classic, creamy, silky, and smooth cheesecake will make your tapas-full stomach even happier.",
+  description: "Silky and smooth cheesecake will make your tapas-full stomach even happier.",
   price: 3.95,
   category: desserts
 )

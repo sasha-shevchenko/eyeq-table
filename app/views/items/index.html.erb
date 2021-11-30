@@ -12,12 +12,12 @@
     </div>
   </div>
   <div class="bottom-card">
-    <% @items.each do |item| %>
-      <%= render "shared/item_card", item: item %>
+    <% @items.order(created_at: :asc).each do |item| %>
+      <%= render "shared/item_card", item: item, item_quantity: @session_items_per_item[item] || 0 %>
     <% end %>
     <div class="blank-card"></div>
     <%= link_to session_items_path, class:"order-link" do %>
-      <button class="order-button">To my order | <%= @current_session.bill_total %>€</button>
+      <button class="order-button">To my order | <%= number_to_currency(@current_session.order_total, locale: :es) %></button>
     <% end %>
   </div>
 </div>

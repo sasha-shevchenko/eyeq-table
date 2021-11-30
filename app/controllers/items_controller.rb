@@ -3,7 +3,8 @@ class ItemsController < ApplicationController
   def index
     @category = Category.find(params[:category_id])
     @items = @category.items
-    @session_items_per_item = @current_session.session_items.group(:item_id).count
+
+    @session_items_per_item = @current_session.session_items.where(sent_to_kitchen: false).group(:item).count
   end
 
   def new
