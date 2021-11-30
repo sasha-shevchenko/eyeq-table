@@ -1,32 +1,29 @@
-<div data-controller="item-quantity" data-url="<%= item_session_items_path(item) %>">
-    <%= link_to "#", class:"item-card-link", data: { toggle: 'modal', target: "#item-show-#{item.id}"} do %>
-      <div class="item-card">
-        <%= cl_image_tag item.photo.key %>
-        <div class="item-info">
-          <p><%= item.name %></p>
-          <div class="price-quantity">
-            <strong><%= number_to_currency(item.price, locale: :es) %></strong>
-            <div class="quant-buttons">
-              <% if @current_session.session_items.where(item: item).any? %>
-                <%= button_to session_item_path(item.session_items.last), method: :delete do %>
-                  <%= image_tag "minus.svg" %>
-                <% end %>
-              <% else %>
-                <%= button_to "", disabled: true do %>
-                  <%= image_tag "minus.svg" %>
-                <% end %>
+<div data-controller="item-quantity" data-url="<%= item_session_items_path(item) %>"  >
+    <div class="item-card item-card-link" data-toggle='modal' data-target="#item-show-<%= item.id %>" >
+      <%= cl_image_tag item.photo.key %>
+      <div class="item-info">
+        <p><%= item.name %></p>
+        <div class="price-quantity">
+          <strong><%= number_to_currency(item.price, locale: :es) %></strong>
+          <div class="quant-buttons">
+            <% if @current_session.session_items.where(item: item).any? %>
+              <%= button_to session_item_path(item.session_items.last), method: :delete, remote: true, data: { action: "click->item-quantity#deleteSessionItem", "delete-url":  session_item_path(item.session_items.last) } do %>
+                <%= image_tag "minus.svg" %>
               <% end %>
-              <div id="quantity" data-item-quantity-target="quantity">
-                <%= @session_items_per_item[item.id] || 0 %>
-              </div>
-              <%= button_to item_session_items_path(item), remote: true, data: { action: "click->item-quantity#createSessionItem" } do %>
-
-                <%= image_tag "plus.svg" %>
+            <% else %>
+              <%= button_to "", disabled: true do %>
+                <%= image_tag "minus.svg" %>
               <% end %>
+            <% end %>
+            <div class="quantity" data-item-quantity-target="quantity">
+              <%= item_quantity %>
             </div>
+            <%= button_to item_session_items_path(item), remote: true, data: { action: "click->item-quantity#createSessionItem" } do %>
+              <%= image_tag "plus.svg" %>
+            <% end %>
           </div>
         </div>
       </div>
-    <% end %>
-    <%= render "shared/item-show-modal", item: item %>
-  </div>
+    </div>
+  <%= render "shared/item-show-modal", item: item %>
+</div>

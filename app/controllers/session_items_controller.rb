@@ -17,9 +17,13 @@ class SessionItemsController < ApplicationController
         format.html {
           redirect_back(fallback_location: session_items_path)
          }
-         format.json {
-          render json: { status: 200 }
-         }
+        format.text {
+          render(
+            partial: 'shared/item_card',
+            locals: { item: @session_item.item, item_quantity: @current_session.session_items.where(sent_to_kitchen: false, item_id: @item.id).count },
+            formats: [:html]
+          )
+        }
       end
     end
   end
@@ -38,9 +42,18 @@ class SessionItemsController < ApplicationController
 
   def destroy
     @session_item = SessionItem.find(params[:id])
+
+    # all of this is here because we have to refactor the partial
     @category = @session_item.item.category
+    @session_items_per_item = @current_session.session_items.group(:item_id).count
+    # all of this is here because we have to refactor the partial
+
     if @session_item.destroy
-      redirect_back(fallback_location: session_items_path)
+      render(
+        partial: 'shared/item_card',
+        locals: { item: @session_item.item, item_quantity: @current_session.session_items.where(sent_to_kitchen: false, item_id: @session_item.item_id).count },
+        formats: [:html]
+      )
     end
   end
 

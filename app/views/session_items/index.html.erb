@@ -13,44 +13,25 @@
 
   <% @unordered_items.each do |item_id, session_items| %>
     <% item = Item.find(item_id) %>
-    <div class="item-card">
-    <div class="item-img">
-        <%= cl_image_tag item.photo.key %>
-    </div>
-    <div class="item-info">
-          <p><%= item.name %></p>
-          <div class="price-quantity">
-            <strong><%= number_to_currency(item.price * session_items.count, locale: :es)  %> </strong>
-            <div class="quant-buttons">
-              <%= button_to session_item_path(item.session_items.last), method: :delete do %>
-                <%= image_tag "minus.svg" %>
-              <% end %>
-              <div id="quantity"><%= session_items.count || 0 %></div>
-              <%= button_to item_session_items_path(item) do %>
-                <%= image_tag "plus.svg" %>
-              <% end %>
-            </div>
-          </div>
-        </div>
-      </div>
+    <%= render "shared/item_card", item: item, item_quantity: session_items.count %>
   <% end %>
 
   <% @ordered_items.each do |item_id, session_items| %>
     <% item = Item.find(item_id) %>
     <div class="item-card card-grey">
-    <div class="item-img">
-        <%= cl_image_tag item.photo.key %>
-    </div>
-    <div class="item-info">
-          <p><%= item.name %></p>
-          <div class="price-quantity">
-            <strong><%= item.price * session_items.count  %> €</strong>
-            <div class="quant-buttons">
-              <div id="quantity" class="card-grey">Already Ordered:  <%= session_items.count || 0 %></div>
-            </div>
+      <div class="item-img">
+          <%= cl_image_tag item.photo.key %>
+      </div>
+      <div class="item-info">
+        <p><%= item.name %></p>
+        <div class="price-quantity">
+          <strong><%= number_to_currency(item.price * session_items.count, locale: :es) %></strong>
+          <div class="quant-buttons">
+            <div id="quantity" class="card-grey">Already Ordered:  <%= session_items.count || 0 %></div>
           </div>
         </div>
       </div>
+    </div>
   <% end %>
 </div>
 

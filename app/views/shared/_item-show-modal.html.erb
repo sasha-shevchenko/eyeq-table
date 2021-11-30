@@ -19,7 +19,7 @@
                 <% end %>
               <% end %>
               <div id="quantity">
-                <%= @session_items_per_item[item.id] || 0 %>
+                <%= @current_session.session_items.where(item: item).count  %>
               </div>
               <%= button_to item_session_items_path(item) do %>
                 <%= image_tag "plus.svg" %>
