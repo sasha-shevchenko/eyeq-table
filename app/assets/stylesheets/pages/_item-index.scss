@@ -136,6 +136,8 @@ h1 {
   background-color: white;
 }
 
-.item-card-grey {
-  background-color: rgb(255, 0, 0);
+.card-grey {
+  filter: grayscale(100%);
+  opacity: 0.6;
+  font-size: 13px;
 }
