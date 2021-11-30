@@ -14,8 +14,12 @@ class SessionItemsController < ApplicationController
         format.html {
           redirect_back(fallback_location: session_items_path)
          }
-        format.json {
-          render json: { status: 200 }
+        format.text {
+          render(
+            partial: 'shared/item_card',
+            locals: { item: @session_item.item },
+            formats: [:html]
+          )
         }
       end
     end
@@ -52,4 +56,3 @@ class SessionItemsController < ApplicationController
   def status
   end
 end
-
