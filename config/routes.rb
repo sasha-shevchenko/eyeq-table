@@ -8,10 +8,8 @@ Rails.application.routes.draw do
     get "/overview", to: "dashboards#overview"
   end
 
-  resources :dashboard, only: [:show], as: :dashboard
+  # resources :dashboard, only: [:show], as: :dashboard
   root to: 'dashboards#show'
-
-
 
   resources :categories, only: [:create, :destroy] do
     resources :items, only: [:index, :new, :create, :edit, :update]
