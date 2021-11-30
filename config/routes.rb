@@ -4,12 +4,14 @@ Rails.application.routes.draw do
 
   resources :restaurants, only: [:show, :update] do
     resources :categories, only: [:index]
+    resource :dashboard, only: [:show, :overview]
+    get "/overview", to: "dashboards#overview"
   end
 
-  get '/dashboard', to: 'dashboards#show', as: :dashboard
+  resources :dashboard, only: [:show], as: :dashboard
   root to: 'dashboards#show'
 
-  get '/dashboard', to: 'dashboards#overview', as: :overview
+
 
   resources :categories, only: [:create, :destroy] do
     resources :items, only: [:index, :new, :create, :edit, :update]
