@@ -11,21 +11,21 @@
 
   <div class="checkout-card"><strong><h1>My Order</h1></strong></div>
 
-  <div class="item-index-card">
-    <% @current_session.items.distinct.each do |item| %>
-      <div class="item-card">
-        <div class="item-img">
-          <%= cl_image_tag item.photo.key %>
-        </div>
-        <div class="item-info">
+  <% @unordered_items.each do |item_id, session_items| %>
+    <% item = Item.find(item_id) %>
+    <div class="item-card">
+    <div class="item-img">
+        <%= cl_image_tag item.photo.key %>
+    </div>
+    <div class="item-info">
           <p><%= item.name %></p>
           <div class="price-quantity">
-            <strong><%= item.price * @current_session.session_items.where(item: item).count  %> €</strong>
+            <strong><%= item.price * session_items.count  %> €</strong>
             <div class="quant-buttons">
               <%= button_to session_item_path(item.session_items.last), method: :delete do %>
                 <%= image_tag "minus.svg" %>
               <% end %>
-              <div id="quantity"><%= @current_session.session_items.where(item: item).count || 0 %></div>
+              <div id="quantity"><%= session_items.count || 0 %></div>
               <%= button_to item_session_items_path(item) do %>
                 <%= image_tag "plus.svg" %>
               <% end %>
@@ -33,11 +33,28 @@
           </div>
         </div>
       </div>
-    <% end %>
-  </div>
+  <% end %>
+
+  <% @ordered_items.each do |item_id, session_items| %>
+    <% item = Item.find(item_id) %>
+    <div class="item-card card-grey">
+    <div class="item-img">
+        <%= cl_image_tag item.photo.key %>
+    </div>
+    <div class="item-info">
+          <p><%= item.name %></p>
+          <div class="price-quantity">
+            <strong><%= item.price * session_items.count  %> €</strong>
+            <div class="quant-buttons">
+              <div id="quantity" class="card-grey">Already Ordered:  <%= session_items.count || 0 %></div>
+            </div>
+          </div>
+        </div>
+      </div>
+  <% end %>
 </div>
 
 <div class="blank-card"></div>
 <%= link_to(session_items_session_path(@current_session), method: :patch, class:"order-link") do %>
-  <button class="order-button">Send Order | <%= @current_session.bill_total %> €</button>
+  <button class="order-button">Send Order | <%= @current_session.order_total %> €</button>
 <% end %>
