@@ -31,6 +31,9 @@ Rails.application.routes.draw do
     collection do
       get "closed", as: :closed
     end
+    member do
+      patch :session_items, to: "session_items#update"
+    end
   end
 
   # resources :categories, only: [:create, :destroy] do

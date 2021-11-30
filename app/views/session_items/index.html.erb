@@ -1,41 +1,43 @@
 <%= render "shared/visitor-navbar" %>
 <div class="yellowbackground">
-    <div class="top-card-checkout">
-      <div class="backtocat">
-        <%= link_to restaurant_categories_path(@restaurant) do%>
-          <i class="far fa-arrow-alt-circle-left arrow-left-order"></i>
-          <% end %>
-      </div>
-    </div>
-    <div class="checkout-card"><strong><h1>My Order</h1></strong></div>
-    <div class="item-index-card">
-      <% @current_session.items.distinct.each do |item| %>
-        <div class="item-card">
-          <div class="item-img">
-            <%= cl_image_tag item.photo.key %>
-          </div>
-          <div class="item-info">
-            <p><%= item.name %></p>
-            <div class="price-quantity">
-              <strong><%= item.price * @current_session.session_items.where(item: item).count  %> €</strong>
-              <div class="quant-buttons">
-                    <%= button_to session_item_path(item.session_items.last), method: :delete do %>
-                      <%= image_tag "minus.svg" %>
-                  <% end %>
-                    <div id="quantity"><%= @current_session.session_items.where(item: item).count || 0 %></div>
-                  <%= button_to item_session_items_path(item) do %>
-                    <%= image_tag "plus.svg" %>
-                  <% end %>
-                  </div>
-              </div>
-          </div>
-        </div>
+
+  <div class="top-card-checkout">
+    <div class="backtocat">
+      <%= link_to restaurant_categories_path(@restaurant) do%>
+        <i class="far fa-arrow-alt-circle-left arrow-left-order"></i>
       <% end %>
     </div>
-    <div>
-    </div>
-</div>
-<div class="blank-card"></div>
-<%= link_to status_session_items_path, class:"order-link" do %>
-      <button class="order-button">Send Order | <%= @current_session.bill_total %> €</button>
+  </div>
+
+  <div class="checkout-card"><strong><h1>My Order</h1></strong></div>
+
+  <div class="item-index-card">
+    <% @current_session.items.distinct.each do |item| %>
+      <div class="item-card">
+        <div class="item-img">
+          <%= cl_image_tag item.photo.key %>
+        </div>
+        <div class="item-info">
+          <p><%= item.name %></p>
+          <div class="price-quantity">
+            <strong><%= item.price * @current_session.session_items.where(item: item).count  %> €</strong>
+            <div class="quant-buttons">
+              <%= button_to session_item_path(item.session_items.last), method: :delete do %>
+                <%= image_tag "minus.svg" %>
+              <% end %>
+              <div id="quantity"><%= @current_session.session_items.where(item: item).count || 0 %></div>
+              <%= button_to item_session_items_path(item) do %>
+                <%= image_tag "plus.svg" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
     <% end %>
+  </div>
+</div>
+
+<div class="blank-card"></div>
+<%= link_to(session_items_session_path(@current_session), method: :patch, class:"order-link") do %>
+  <button class="order-button">Send Order | <%= @current_session.bill_total %> €</button>
+<% end %>

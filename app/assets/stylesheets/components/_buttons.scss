@@ -44,7 +44,6 @@
 
 .socials {
   color: white;
-  // padding: 8px 24px;
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
   background: #FED060;
@@ -59,19 +58,26 @@
   bottom: 0px;
   width: 100%;
   text-align: center;
+
     .fa-facebook-f {
   color: white;
   font-size: 25px;
   }
+
   .fa-instagram {
   color: white;
   margin-left: 30px;
   font-size: 25px;
   }
+
   .leavereview {
   color: white;
   font-size: 20px;
   margin-top: 10px;
+  &:hover {
+      text-decoration: none;
+      color: white;
+    }
   }
 }
 
@@ -80,18 +86,19 @@
   position: fixed;
   bottom: 30px;
   right: 55px;
-    .order-button {
-      color: white;
-      padding: 8px 24px;
-      border: none;
-      border-radius: 32px;
-      background: #FED060;
-      transition: 0.3s ease;
-      text-decoration: bolder;
-      width: 250px;
-      height: 50px;
-      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    }
+
+  .order-button {
+    color: white;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 32px;
+    background: #FED060;
+    transition: 0.3s ease;
+    text-decoration: bolder;
+    width: 250px;
+    height: 50px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
 }
 
 .dash-cat-buttons {

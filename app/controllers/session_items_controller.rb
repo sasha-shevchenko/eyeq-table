@@ -14,6 +14,17 @@ class SessionItemsController < ApplicationController
     end
   end
 
+  def update
+    # find the session_items within my order
+    @current_session.session_items
+    # update the sent_to_kitchen boolean to true for all the items
+    @current_session.session_items.each do |session_item|
+      session_item.sent_to_kitchen = true
+    end
+    # redirect to status_session_items_path
+    redirect_to status_session_items_path
+  end
+
   def destroy
     @session_item = SessionItem.find(params[:id])
     @category = @session_item.item.category
