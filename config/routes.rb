@@ -6,6 +6,11 @@ Rails.application.routes.draw do
     resources :categories, only: [:index]
   end
 
+  get '/dashboard', to: 'dashboards#show', as: :dashboard
+  root to: 'dashboards#show'
+
+  get '/dashboard', to: 'dashboards#overview', as: :overview
+
   resources :categories, only: [:create, :destroy] do
     resources :items, only: [:index, :new, :create, :edit, :update]
   end
@@ -19,9 +24,6 @@ Rails.application.routes.draw do
       get "status", as: :status
     end
   end
-
-  get '/dashboard', to: 'dashboards#show', as: :dashboard
-  root to: 'dashboards#show'
 
   resources :tables, only: [] do
     resources :sessions, only: [:new, :update]
