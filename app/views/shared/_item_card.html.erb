@@ -17,7 +17,7 @@
                 <% end %>
               <% end %>
               <div class="quantity" data-item-quantity-target="quantity">
-                <%= @session_items_per_item[item.id] || 0 %>
+                <%= @current_session.session_items.where(item: item).count %>
               </div>
               <%= button_to item_session_items_path(item), remote: true, data: { action: "click->item-quantity#createSessionItem" } do %>
                 <%= image_tag "plus.svg" %>
