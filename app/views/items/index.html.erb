@@ -12,7 +12,7 @@
     </div>
   </div>
   <div class="bottom-card">
-    <% @items.each do |item| %>
+    <% @items.order(created_at: :asc).each do |item| %>
       <%= render "shared/item_card", item: item %>
     <% end %>
     <div class="blank-card"></div>
