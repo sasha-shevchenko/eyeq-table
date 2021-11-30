@@ -17,7 +17,7 @@
     <% end %>
     <div class="blank-card"></div>
     <%= link_to session_items_path, class:"order-link" do %>
-      <button class="order-button">To my order | <%= number_to_currency(@current_session.bill_total, locale: :es) %></button>
+      <button class="order-button">To my order | <%= number_to_currency(@current_session.order_total, locale: :es) %></button>
     <% end %>
   </div>
 </div>
