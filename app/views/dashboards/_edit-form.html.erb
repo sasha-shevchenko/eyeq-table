@@ -1,12 +1,16 @@
 <div class="form-group" data-controller="hide-form">
-  <button data-action="click->hide-form#toggleForm">Update Restaurant Details</button>
-  <%= simple_form_for current_restaurant, html: { class: 'd-none', data: { hide_form_target: 'form' } } do |f| %>
-    <%= f.input :name %>
-    <%= f.input :cuisine %>
-    <%= f.input :instagram_url %>
-    <%= f.input :facebook_url %>
-    <%= f.input :tripadvisor_url %>
-    <%= f.input :logo, as: :file  %>
-    <%= f.button :submit %>
-  <% end %>
+  <button data-action="click->hide-form#toggleForm" class = "restaurant-details">Update Restaurant Details
+  <i class="fas fa-angle-down text-align-right" style = "text-align: right"></i>
+  </button>
+  <div class = "formcontent">
+    <%= simple_form_for current_restaurant, html: { class: 'd-none', data: { hide_form_target: 'form' } } do |f| %>
+      <%= f.input :name %>
+      <%= f.input :cuisine %>
+      <%= f.input :instagram_url %>
+      <%= f.input :facebook_url %>
+      <%= f.input :tripadvisor_url %>
+      <%= f.input :logo, as: :file  %>
+      <%= f.button :submit %>
+    <% end %>
+    </div>
 </div>

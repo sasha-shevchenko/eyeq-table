@@ -8,19 +8,23 @@
     <div class="dash-category-card">
       <h3><%= category.name %></h3>
       <div class="dash-item-list">
-        <ul>
+        <ul class = >
           <% category.items.each do |item| %>
-            <li>
-              <strong><%= item.name %></strong> -
-              <%= item.description %> -
-              <strong><%= item.price %>€</strong> -
-              <%= link_to item_path(item), method: :delete, data: { confirm: "Are you sure you want to delete?" } do %>
-                <i class="far fa-trash-alt"></i>
-              <% end %> -
-              <%= link_to edit_category_item_path(category, item) do %>
-                <i class="far fa-edit"></i>
-              <% end %>
-            </li>
+            <div class = "card d-flex">
+              <li class = "d-flex justify-content-between">
+                <strong><%= item.name %></strong>
+                <strong><%= item.price %>€</strong>
+              </li>
+              <%= item.description %>
+              <li class = "d-flex">
+                <%= link_to item_path(item), method: :delete, data: { confirm: "Are you sure you want to delete?" } do %>
+                  <i class="far fa-trash-alt"></i>
+                <% end %> -
+                <%= link_to edit_category_item_path(category, item) do %>
+                  <i class="far fa-edit"></i>
+                <% end %>
+              </li>
+            </div>
           <% end %>
         </ul>
       </div>
