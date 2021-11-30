@@ -1,0 +1,24 @@
+<%= render "shared/restaurant-navbar" %>
+<div class="dashboard-overview-container">
+  <div class="restaurant-overview-display">
+    <div class="table-overview-plan">
+      <h1>Table Overview</h1>
+      <div class="table-overview-img">
+      </div>
+    </div>
+    <div class="orders-tab">
+      <h1>Active orders</h1>
+      <% @ordered_items.each do |item_id, session_items| %>
+      <% item = Item.find(item_id) %>
+      <div class="item-card">
+        <div class="item-info">
+        <p><%= item.created_at %></p>
+        <p><%= item.name %></p>
+        <div id="quantity">Quantity:  <%= session_items.count %></div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%= render "shared/footer" %>
