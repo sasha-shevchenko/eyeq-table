@@ -26,8 +26,8 @@ export default class extends Controller {
     deleteSessionItem(event) {
       event.preventDefault();
       event.stopPropagation();
-      console.log(event.currentTarget)
-      console.log(event.currentTarget.dataset.deleteUrl)
+      // console.log(event.currentTarget)
+      // console.log(event.currentTarget.dataset.deleteUrl)
 
       fetch(event.currentTarget.dataset.deleteUrl, {
         method: 'DELETE',
