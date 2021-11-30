@@ -14,13 +14,12 @@ export default class extends Controller {
 
       fetch(this.element.dataset.url, {
         method: 'POST',
-        headers: { 'Accept': "application/json", 'X-CSRF-Token': csrfToken() },
+        headers: { 'Accept': "text/plain", 'X-CSRF-Token': csrfToken() },
       })
-      .then(response => response.json())
-      .then((data) => {
-          this.quantityTarget.innerText = Number.parseInt(this.quantityTarget.innerText, 10) + 1;
-          console.log(data);
-        });
+        .then(response => response.text())
+        .then((data) => {
+          this.element.outerHTML = data;
+        })
     }
 
     deleteSessionItem(event) {
