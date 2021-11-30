@@ -1,10 +1,13 @@
-<h2>Edit item on <%= @category.name %></h2>
-<div class="edit-item">
-  <%= simple_form_for [@category, @item] do |f| %>
-    <%= f.input :name %>
-    <%= f.input :description %>
-    <%= f.input :price %>
-    <%= f.input :photo, as: :file %>
-    <%= f.button :submit, class: "btn btn-success"%>
-  <% end %>
+<%= render "shared/restaurant-navbar" %>
+<div class = "edit-item-body">
+  <h2>Edit item on <%= @category.name %></h2>
+  <div class="edit-item">
+    <%= simple_form_for [@category, @item] do |f| %>
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :price %>
+      <%= f.input :photo, as: :file %>
+      <%= f.button :submit, class: "btn btn-update"%>
+    <% end %>
+  </div>
 </div>
