@@ -76,19 +76,22 @@
   width: 100%;
   text-align: center;
     a {
-      font-size: 20px;
+      font-size: 30px;
       text-decoration: none;
       color: white;
     }
     ul {
       list-style: none;
-      padding: 10px 0px;
-      margin: 0px;
+      margin: 0px 60px 0px 20px;
         li {
           display: inline-block;
-          padding:10px;
+          padding: 20px;
         }
     }
+}
+#owl {
+  width: 40px;
+  margin-bottom: 10px;
 }
 
 // CAROUSEL
