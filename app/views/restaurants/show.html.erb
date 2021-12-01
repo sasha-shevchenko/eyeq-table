@@ -4,46 +4,60 @@
     <h2><%= @restaurant.name %></h2>
     <%= image_tag "laesquinica.png", class: "avatar" %>
   </div>
-  <div class="bottom-card">
+  <div class="rest-bottom-card">
+    <h4>Top Picks</h4>
     <%= render 'shared/carousel' %>
     <%= link_to restaurant_categories_path(@restaurant) do %>
       <button class="menu-button">Go to menu</button>
     <% end %>
+    <%= link_to closed_sessions_path do %>
+      <button class="menu-button" id="bill-button">Request bill</button>
+    <% end %>
     <h4>Suggested Combos</h4>
+    <%# <p><i class="fas fa-long-arrow-alt-down"></i></p> %>
     <div class="combos">
-      <div class="combo-card"></div>
-        <img class="pulpo" src="http://res.cloudinary.com/dwonn5etb/image/upload/v1/development/tfa7tf0r6axzcxaloft0ln28qzfe">
-        <p>Fried Calamari</p>
+      <div class="combo-card">
+        <img src="http://res.cloudinary.com/dwonn5etb/image/upload/v1/development/tfa7tf0r6axzcxaloft0ln28qzfe">
+        <div class="combo-card-info">
+          <strong><p>Fried Calamari</p></strong>
+          <p>Deliciously fresh, tasty calamari</p>
+        </div>
       </div>
-      <p><i class="fas fa-plus"></i></p>
-      <div class="combo-card"></div>
-        <img class="pulpo" src="http://res.cloudinary.com/dwonn5etb/image/upload/v1/development/tfa7tf0r6axzcxaloft0ln28qzfe">
-        <p>Fried Calamari</p>
+      <div class="plus"><i class="fas fa-plus"></i></div>
+      <div class="combo-card">
+        <img id="combo-wine" src="https://res.cloudinary.com/dwonn5etb/image/upload/v1637923306/eyeqtable/white-wine_gnuggf.png">
+        <div class="combo-card-info">
+          <strong><p>White wine</p></strong>
+          <p>Crisp, dry white wine</p>
+        </div>
       </div>
-      <p><i class="fas fa-plus"></i></p>
-      <div class="combo-card"></div>
-        <img class="pulpo" src="http://res.cloudinary.com/dwonn5etb/image/upload/v1/development/tfa7tf0r6axzcxaloft0ln28qzfe">
-        <p>Fried Calamari</p>
+      <div class="plus"><i class="fas fa-plus"></i></div>
+      <div class="combo-card">
+        <img src="https://res.cloudinary.com/dwonn5etb/image/upload/v1637922627/eyeqtable/Cheesecake_jlc8un.png">
+        <div class="combo-card-info">
+          <strong><p>Cheescake of the day</p></strong>
+          <p>Creamy cheesecake, made in house</p>
+        </div>
       </div>
     </div>
   </div>
-  <div class = "socials">
-    <div class = "d-flex justify-content-center socialcontent">
-      <div>
+  <div class="home-blank-card"></div>
+  <div class="socials">
+    <ul>
+      <li>
+        <%= link_to @restaurant.tripadvisor_url do %>
+          Leave Review <i class="far fa-star"></i>
+        <% end %>
+      </li>
+      <li>
         <%= link_to @restaurant.facebook_url do %>
-        <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-facebook-f"></i>
         <% end %>
-      </div>
-      <div>
+      </li>
+      <li>
         <%= link_to @restaurant.instagram_url do %>
-        <i class="fab fa-instagram"></i>
+          <i class="fab fa-instagram"></i>
         <% end %>
-      </div>
-    </div>
-    <div>
-      <%= link_to @restaurant.tripadvisor_url do %>
-      <p class="leavereview">Leave Review <i class="far fa-arrow-alt-circle-right"></i></p>
-      <% end %>
-    </div>
-  </div>
+      </li>
+    </ul>
 </div>
