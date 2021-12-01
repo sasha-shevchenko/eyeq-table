@@ -123,7 +123,7 @@ h1 {
     margin-top: 0px;
   }
 
-  #quantity {
+  .quantity {
     margin: 3px 10px 0px 10px;
     color: black;
     font-weight: bolder;
@@ -136,6 +136,8 @@ h1 {
   background-color: white;
 }
 
-.item-card-grey {
-  background-color: rgb(255, 0, 0);
+.card-grey {
+  filter: grayscale(100%);
+  opacity: 0.6;
+  font-size: 13px;
 }
