@@ -24,8 +24,7 @@
       color: #FED060;
       font-weight: bolder;
       text-align: center;
-      margin-top: 50px;
-      margin-bottom: 20px;
+      margin: 30px 0px 40px 0px;
     }
 }
 .rest-buttons {
@@ -33,7 +32,7 @@
 }
 .combo-card {
   background-color: white;
-  border: 1px solid rgba(128, 128, 128, 0.11);
+  border: 2px dashed rgba(112, 111, 111, 0.11);
   border-radius: 32px;
   height: 140px;
   display: flex;
@@ -45,7 +44,8 @@
     }
 }
 .combo-card-info{
-  padding-left: 15px;
+  padding: 25px 0px 10px 15px;
+
 }
 #combo-wine {
   object-fit: contain;
