@@ -4,12 +4,13 @@ class DashboardsController < ApplicationController
   end
 
   def overview
-    @ordered_items = @current_session.session_items.where(sent_to_kitchen: true).group_by{ |session_item| session_item.item_id }
-    # @timestamp = @current_session.session_items.created_at
+    # all open session_items.where(sent_to_kitchen: true)
+    @sessions = current_restaurant.sessions.where(done: false)
+  end
 
-    # Timestamp
-    # Table number
-    # Ordered Quantity
-    # item name
+  private
+
+  def strong_params
+    params.require(:restaurant).permit(:cusine)
   end
 end

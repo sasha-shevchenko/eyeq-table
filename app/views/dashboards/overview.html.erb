@@ -2,23 +2,30 @@
 <div class="dashboard-overview-container">
   <div class="restaurant-overview-display">
     <div class="table-overview-plan">
-      <h1>Table Overview</h1>
+      <%# <h1>Table Overview</h1> %>
       <div class="table-overview-img">
       </div>
     </div>
-    <div class="orders-tab">
-      <h1>Active orders</h1>
-      <% @ordered_items.each do |item_id, session_items| %>
-      <% item = Item.find(item_id) %>
-      <div class="item-card">
-        <div class="item-info">
-        <p><%= item.created_at %></p>
-        <p><%= item.name %></p>
-        <div id="quantity">Quantity:  <%= session_items.count %></div>
+    <div class="active-orders-column">
+      <h1 class="active-orders">Table orders</h1>
+      <% @sessions.each do |session| %>
+        <%# <p>Session <%= session.id %></p>
+        <div class="active-orders-card">
+          <p>Table number: <%= session.table.number %></p>
+          <ul class="list-unstyled">
+            <% session.session_items.each do |session_item| %>
+              <p class="time-stamp">Time stamp: <%= session_item.created_at %></p>
+              <li class="active-orders-items">
+                <% quantity = session.session_items.to_a.count(session_item) %>
+                <p>Ordered Item: <%= session_item.quantity %>x <%= session_item.item.name %></p>
+              </li>
+            <% end %>
+          </ul>
         </div>
-      </div>
       <% end %>
     </div>
   </div>
 </div>
 <%= render "shared/footer" %>
+
+<%# comment by Sasha: we have a little problem here with the display of quantity.. work in progress %>
