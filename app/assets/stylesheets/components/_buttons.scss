@@ -116,16 +116,22 @@
   background-color: #FB5E5E;
 
 .btn-info {
-  background-color: #39e597;
-  border-color: #39e597;
+
+  background-color: #5ddba2;
+  border-color: #5ddba2;
+
   color: black;
+  text-decoration: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 200px;
   &:hover {
     color: black;
-    background-color: #10db7f;
-    border-color: #10db7f;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4)}
-  width: 200px;
+
+    background-color: #00cd71;
+    border-color: #00cd71;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    text-decoration: none}
+    width: 200px;
 }
 
 .btn-warning {
@@ -171,20 +177,58 @@
   border-bottom-right-radius: 10px;
 }
 
-.btn-create-category {
-  background-color: #FED060;
-}
-
 .btn-update {
   background-color: #FED060;
   border-color: #FED060;
   color: black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 200px;
     &:hover {
     color: black;
     background-color: #ffc83d;
     border-color: #ffc83d;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)}
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)}
+}
+
+.btn-update-restaurant {
+  background-color: #FED060;
+  border-color: #FED060;
+  color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 50px;
+  margin-bottom: 40px;
+  width: 200px;
+    &:hover {
+    color: black;
+    background-color: #ffc83d;
+    border-color: #ffc83d}
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)}
+}
+
+.btn-create-category {
+  background-color: #5ddba2;
+  border-color: #5ddba2;
+  color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 50px;
+  margin-bottom: 40px;
+  width: 200px;
+    &:hover {
+    color: black;
+    background-color: #00cd71;
+    border-color: #00cd71}
+}
+
+.btn-add-item {
+  background-color: #5ddba2;
+  border-color: #5ddba2;
+  color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 200px;
+    &:hover {
+    color: black;
+    background-color: #00cd71;
+    border-color: #00cd71;
 }
 
 .btn-flat-ok {
