@@ -1,10 +1,13 @@
-<h2>Add item to <%= @category.name %></h2>
-<div class="add-item">
-  <%= simple_form_for [@category, @item] do |f| %>
-    <%= f.input :name %>
-    <%= f.input :description %>
-    <%= f.input :price %>
-    <%= f.input :photo, as: :file %>
-    <%= f.button :submit, class: "btn btn-success"%>
-  <% end %>
+<%= render "shared/restaurant-navbar" %>
+<div class = "add-item-body">
+  <h2>Add item to <%= @category.name %></h2>
+    <div class="add-item">
+      <%= simple_form_for [@category, @item] do |f| %>
+        <%= f.input :name %>
+        <%= f.input :description %>
+        <%= f.input :price %>
+        <%= f.input :photo, as: :file %>
+        <%= f.button :submit, class: "btn btn-add-item"%>
+      <% end %>
+    </div>
 </div>
