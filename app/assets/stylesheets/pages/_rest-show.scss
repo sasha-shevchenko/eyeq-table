@@ -74,7 +74,6 @@
   border-top-right-radius: 32px;
   background: #A8E8E8;
   width: 100%;
-
   text-align: center;
     a {
       font-size: 20px;
@@ -95,12 +94,15 @@
 // CAROUSEL
 .carousel .carousel-indicators li {
   background-color: #D9A321;
-}
-.carousel-control-next-icon, .carousel-control-prev-icon {
-  background-color: #D9A321;
-  border: 1px solid white;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
 }
+// .carousel-control-next-icon, .carousel-control-prev-icon {
+//   background-color: #D9A321;
+//   border: 1px solid white;
+//   border-radius: 50%;
+// }
 .carousel-inner {
   height: 230px;
 }
