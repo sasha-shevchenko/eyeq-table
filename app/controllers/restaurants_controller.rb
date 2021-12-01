@@ -8,7 +8,7 @@ class RestaurantsController < ApplicationController
   def update
     @restaurant = Restaurant.find(params[:id])
     if @restaurant.update(strong_params)
-      redirect_to dashboard_path
+      redirect_to restaurant_dashboard_path(@current_session.restaurant)
     end
   end
 
@@ -18,4 +18,3 @@ class RestaurantsController < ApplicationController
     params.require(:restaurant).permit(:name, :instagram_url, :facebook_url, :tripadvisor_url, :logo)
   end
 end
- # :photo in strong
