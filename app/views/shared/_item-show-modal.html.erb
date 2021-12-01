@@ -1,30 +1,14 @@
 <div class="modal fade bd-example-modal-sm" id="item-show-<%= item.id %>" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-sm">
     <div class="modal-content">
+    <%# <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> %>
       <div class="item-card">
         <%= cl_image_tag item.photo.key %>
         <div class="item-info">
           <p><%= item.name %></p>
           <%= item.description %>
           <div class="price-quantity">
-            <strong><%= item.price %> €</strong>
-            <div class="quant-buttons">
-              <% if @current_session.session_items.where(item: item).any? %>
-                <%= button_to session_item_path(item.session_items.last), method: :delete do %>
-                  <%= image_tag "minus.svg" %>
-                <% end %>
-              <% else %>
-                <%= button_to "", disabled: true do %>
-                  <%= image_tag "minus.svg" %>
-                <% end %>
-              <% end %>
-              <div id="quantity">
-                <%= @current_session.session_items.where(item: item).count  %>
-              </div>
-              <%= button_to item_session_items_path(item) do %>
-                <%= image_tag "plus.svg" %>
-              <% end %>
-            </div>
+            <strong><%= number_to_currency(item.price, locale: :es) %></strong>
           </div>
         </div>
       </div>
