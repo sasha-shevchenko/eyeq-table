@@ -35,9 +35,7 @@ class SessionItemsController < ApplicationController
     @current_session.session_items.each do |session_item|
       session_item.update(sent_to_kitchen: true)
     end
-
-    # redirect_to status_session_items_path
-    redirect_to restaurant_path(@current_session.restaurant)
+    redirect_to status_session_items_path
   end
 
   def destroy
