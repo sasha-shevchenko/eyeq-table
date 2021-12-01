@@ -45,11 +45,6 @@
   <div class="socials">
     <ul>
       <li>
-        <%= link_to @restaurant.tripadvisor_url do %>
-          <%= image_tag "tripadvisor.svg", id:"owl" %>
-        <% end %>
-      </li>
-      <li>
         <%= link_to @restaurant.facebook_url do %>
           <i class="fab fa-facebook-f"></i>
         <% end %>
@@ -57,6 +52,11 @@
       <li>
         <%= link_to @restaurant.instagram_url do %>
           <i class="fab fa-instagram"></i>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to @restaurant.tripadvisor_url do %>
+          <%= image_tag "tripadvisor.svg", id:"owl" %>
         <% end %>
       </li>
     </ul>
