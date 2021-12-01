@@ -1,18 +1,19 @@
 <%= render "shared/visitor-navbar" %>
 <div class="yellow-background">
   <div class="rest-top-card">
-    <h2><%= @restaurant.name %></h2>
-    <%= image_tag "laesquinica.png", class: "avatar" %>
+    <h2>Welcome!</h2>
+    <%= image_tag "esquinica.svg", class: "avatar", id: "logo" %>
   </div>
   <div class="rest-bottom-card">
-    <h4>Top Picks</h4>
-    <%= render 'shared/carousel' %>
+    <div class="rest-buttons"></div>
     <%= link_to restaurant_categories_path(@restaurant) do %>
       <button class="menu-button">Go to menu</button>
     <% end %>
     <%= link_to closed_sessions_path do %>
       <button class="menu-button" id="bill-button">Request bill</button>
     <% end %>
+    <h4>Top Picks</h4>
+    <%= render 'shared/carousel' %>
     <h4>Suggested Combos</h4>
     <%# <p><i class="fas fa-long-arrow-alt-down"></i></p> %>
     <div class="combos">
@@ -46,7 +47,7 @@
     <ul>
       <li>
         <%= link_to @restaurant.tripadvisor_url do %>
-          Leave Review <i class="far fa-star"></i>
+          <%= image_tag "tripadvisor.svg" %>
         <% end %>
       </li>
       <li>
