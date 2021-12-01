@@ -15,7 +15,6 @@
     <h4>Top Picks</h4>
     <%= render 'shared/carousel' %>
     <h4>Suggested Combos</h4>
-    <%# <p><i class="fas fa-long-arrow-alt-down"></i></p> %>
     <div class="combos">
       <div class="combo-card">
         <img src="http://res.cloudinary.com/dwonn5etb/image/upload/v1/development/tfa7tf0r6axzcxaloft0ln28qzfe">
@@ -47,7 +46,7 @@
     <ul>
       <li>
         <%= link_to @restaurant.tripadvisor_url do %>
-          <%= image_tag "tripadvisor.svg" %>
+          <%= image_tag "tripadvisor.svg", id:"owl" %>
         <% end %>
       </li>
       <li>
