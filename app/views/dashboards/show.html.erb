@@ -19,10 +19,10 @@
               <ul class = "item-buttons">
                 <li class = "d-flex justify-content-lg-center">
                   <%= link_to edit_category_item_path(category, item) do %>
-                    <button type= "button" class = "btn btn-change-item"><i class="fas fa-edit"></i> Change Item</button>
+                    <button type= "button" class = "btn btn-change-item"><i class="fas fa-edit"></i></button>
                   <% end %>
                   <%= link_to item_path(item), method: :delete, data: { confirm: "Are you sure you want to delete?" } do %>
-                    <button type= "button" class = "btn btn-del-item"><i class="fas fa-times"></i> Delete Item</button>
+                    <button type= "button" class = "btn btn-del-item"><i class="fas fa-times"></i></button>
                   <% end %>
                 </li>
               </ul>
