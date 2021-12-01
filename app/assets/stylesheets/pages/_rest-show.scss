@@ -1,0 +1,118 @@
+.rest-top-card {
+    h2 {
+      text-align: center;
+      color: white;
+      padding: 10px 0px 10px 0px;
+    }
+    #logo {
+      display: block;
+      margin: 0 auto;
+      width: 115px;
+      height: 115px;
+      margin-bottom: -50px;
+    }
+}
+.rest-bottom-card {
+  background-color: white;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 20px;
+    h4 {
+      color: #FED060;
+      font-weight: bolder;
+      text-align: center;
+      margin: 30px 0px 40px 0px;
+    }
+}
+.rest-buttons {
+  margin-top: 50px;;
+}
+.combo-card {
+  background-color: white;
+  border: 2px dashed rgba(112, 111, 111, 0.11);
+  border-radius: 32px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+    img {
+      height: 90px;
+      width: 90px;
+    }
+}
+.combo-card-info{
+  padding: 25px 0px 10px 15px;
+
+}
+#combo-wine {
+  object-fit: contain;
+
+}
+.plus{
+      color: #FED060;
+      font-weight: bolder;
+      font-size: 25px;
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+.home-blank-card {
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  margin-bottom: -30px;
+}
+// SOCIALS
+.socials {
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+  background: #A8E8E8;
+  width: 100%;
+
+  text-align: center;
+    a {
+      font-size: 20px;
+      text-decoration: none;
+      color: white;
+    }
+    ul {
+      list-style: none;
+      padding: 10px 0px;
+      margin: 0px;
+        li {
+          display: inline-block;
+          padding:10px;
+        }
+    }
+}
+
+// CAROUSEL
+.carousel .carousel-indicators li {
+  background-color: #D9A321;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  background-color: #D9A321;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.carousel-inner {
+  height: 230px;
+}
+.carousel {
+  margin-top: 10px;
+}
+
+.carousel-item {
+    img {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+   }
+}
+
+#croquetas, #chorizo {
+  height: 200px;
+}
