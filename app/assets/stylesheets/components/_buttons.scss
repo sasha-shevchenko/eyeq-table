@@ -1,14 +1,3 @@
-// .btn-flat-feedback {
-//   color: white;
-//   padding: 8px 24px;
-//   border-radius: 20px;
-//   background: #FED060;
-//   transition: 0.3s ease;
-//   margin-top: 110px;
-//   text-decoration: bolder;
-//   width: 160px;
-//   height: 40px;
-// }
 
 .btn-flat-menu {
   color: white;
@@ -96,7 +85,6 @@
   border-radius: 5px;
 }
 
-
 .menu-button {
     color: white;
     padding: 8px 24px;
@@ -117,17 +105,14 @@
 }
 
 .btn-info {
-
   background-color: #5ddba2;
   border-color: #5ddba2;
-
   color: black;
   text-decoration: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   width: 200px;
   &:hover {
     color: black;
-
     background-color: #00cd71;
     border-color: #00cd71;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
@@ -142,7 +127,7 @@
   color: black;
   right: 0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    &:hover {
+  &:hover {
     color: black;
     background-color: #eaeaea;
     border-color: #eaeaea;
@@ -156,7 +141,6 @@
   background-color: #FED060;
   width: 50%;
   border-bottom-left-radius: 10px;
-
   &:hover {
     color: black;
     background-color: #ffc83d;
@@ -254,9 +238,9 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-
 #back-to-home {
-  background-color: #C1D649;
+  background-color: rgba(254, 208, 96, 0.8);
+  border: 2px solid white;
   position: fixed;
   bottom: 20px;
   right: 60px;
