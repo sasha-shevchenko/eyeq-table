@@ -1,30 +1,33 @@
 <%= render "shared/restaurant-navbar" %>
 <div class="dashboard-overview-container">
-  <div class="restaurant-overview-display">
-    <div class="table-overview-plan">
-      <%# <h1>Table Overview</h1> %>
-      <div class="table-overview-img">
+  <div class = "overview-body">
+    <div><h1 class="active-orders">Table Orders</h1></div>
+    <div class="restaurant-overview-display">
+      <div class="table-overview-plan">
+        <%# <h1>Table Overview</h1> %>
+        <div class="table-overview-img">
+        </div>
       </div>
-    </div>
-    <div class="active-orders-column">
-    <h1 class="active-orders">Table orders</h1>
-      <div class="active-orders-card">
-        <h2>Order #<%= @session.id %></h2>
-        <p>Table number: <%= @session.table.number %></p>
-        <p> <%= @session.updated_at.strftime('%D -%r') %> </p>
+      <div class="active-orders-column">
+        <div class="active-orders-card">
+        <%# <div class="green-pin"></div> %>
+          <h2>Order #<%= @session.id %></h2>
+          <p>Table number: <%= @session.table.number %></p>
+          <p> <%= @session.updated_at.strftime('%D -%r') %> </p>
 
-        <ul class="list-unstyled">
+          <ul class="list-unstyled">
 
-          <% @session.distinct_items.each do |item| %>
-            <% items_count = @session.items_count %>
-            <li>
-              <% quantity = items_count[item.name] %>
-              <p><%= quantity %>x <%= item.name %> </p>
-            </li>
-          <% end %>
+            <% @session.distinct_items.each do |item| %>
+              <% items_count = @session.items_count %>
+              <li>
+                <% quantity = items_count[item.name] %>
+                <p><%= quantity %>x <%= item.name %> </p>
+              </li>
+            <% end %>
 
-        </ul>
+          </ul>
 
+        </div>
       </div>
     </div>
   </div>

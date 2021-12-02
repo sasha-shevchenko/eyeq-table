@@ -7,11 +7,16 @@
   padding: 0px 30px;
   color: rgba(0,0,0,0.3);
   margin-top: 30px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
+
 .footer-links {
   display: flex;
   align-items: center;
 }
+
 .footer-links a {
   color: rgb(71, 67, 67);
   opacity: 0.3;
@@ -19,9 +24,11 @@
   font-size: 24px;
   padding: 0px 10px;
 }
+
 .footer-links a:hover {
   opacity: 1;
 }
+
 .footer .fa-heart {
   color: #D23333;
 }
