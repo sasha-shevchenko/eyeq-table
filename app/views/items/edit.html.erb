@@ -1,6 +1,6 @@
 <%= render "shared/restaurant-navbar" %>
 <div class = "edit-item-body">
-  <h2>Edit item on <%= @category.name %></h2>
+  <h2>Edit Item on <%= @category.name %></h2>
   <div class="edit-item">
     <%= simple_form_for [@category, @item] do |f| %>
       <%= f.input :name %>
