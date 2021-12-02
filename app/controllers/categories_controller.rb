@@ -8,14 +8,14 @@ class CategoriesController < ApplicationController
     @category = Category.new(strong_params)
     @category.restaurant = current_restaurant
     if @category.save
-      redirect_to restaurant_dashboard_path(@current_session.restaurant)
+      redirect_to restaurant_dashboard_path(current_restaurant)
     end
   end
 
   def destroy
     @category = Category.find(params[:id])
     if @category.destroy
-      redirect_to restaurant_dashboard_path(@current_session.restaurant)
+      redirect_to restaurant_dashboard_path(current_restaurant)
     end
   end
 
