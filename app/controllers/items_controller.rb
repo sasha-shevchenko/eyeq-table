@@ -16,7 +16,7 @@ class ItemsController < ApplicationController
     @item = Item.new(strong_params)
     @item.category_id = params[:category_id]
     if @item.save
-      redirect_to restaurant_dashboard_path(@current_session.restaurant)
+      redirect_to restaurant_dashboard_path(current_restaurant)
     end
   end
 
@@ -29,14 +29,14 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     @item.category_id = params[:category_id]
     if @item.update(strong_params)
-      redirect_to restaurant_dashboard_path(@current_session.restaurant)
+      redirect_to restaurant_dashboard_path(current_restaurant)
     end
   end
 
   def destroy
     @item = Item.find(params[:id])
     if @item.destroy
-      redirect_to restaurant_dashboard_path(@current_session.restaurant)
+      redirect_to restaurant_dashboard_path(current_restaurant)
     end
   end
 
