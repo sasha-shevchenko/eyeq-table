@@ -50,13 +50,13 @@
         <% end %>
       </li>
       <li>
-        <%= link_to @restaurant.instagram_url do %>
-          <i class="fab fa-instagram"></i>
+        <%= link_to @restaurant.tripadvisor_url do %>
+          <%= image_tag "tripadvisor.svg", id:"owl" %>
         <% end %>
       </li>
       <li>
-        <%= link_to @restaurant.tripadvisor_url do %>
-          <%= image_tag "tripadvisor.svg", id:"owl" %>
+        <%= link_to @restaurant.instagram_url do %>
+          <i class="fab fa-instagram"></i>
         <% end %>
       </li>
     </ul>
