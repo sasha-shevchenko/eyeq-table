@@ -3,7 +3,7 @@
     <div class="modal-content">
     <%# <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> %>
       <div class="item-card">
-        <%= cl_image_tag item.photo.key %>
+        <div class = "item-card-images"><%= cl_image_tag item.photo.key %></div>
         <div class="item-info">
           <p><%= item.name %></p>
           <%= item.description %>
