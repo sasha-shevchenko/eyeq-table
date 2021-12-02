@@ -4,7 +4,7 @@
       <div class="item-info">
         <p><%= item.name %></p>
         <div class="price-quantity">
-          <strong><%= number_to_currency(item.price, locale: :es) %></strong>
+          <strong data-item-quantity-target="price"><%= number_to_currency(item.price, locale: :es) %></strong>
           <div class="quant-buttons">
             <% if @current_session.session_items.where(item: item).any? %>
               <%= button_to session_item_path(item.session_items.last), method: :delete, remote: true, data: { action: "click->item-quantity#deleteSessionItem", "delete-url":  session_item_path(item.session_items.last) } do %>

@@ -2,7 +2,7 @@ import { Controller } from "stimulus";
 import { csrfToken } from "@rails/ujs";
 
 export default class extends Controller {
-  static targets = ['quantity'];
+  static targets = ['quantity', 'price'];
 
    connect() {
      console.log("connected");
@@ -18,8 +18,12 @@ export default class extends Controller {
       })
         .then(response => response.text())
         .then((data) => {
+          const price = Number.parseFloat(this.priceTarget.innerHTML.replace(",", "."))
+          const updateOrderPriceEvent = new CustomEvent("updated-order", {detail: {price: price} })
+          window.dispatchEvent(updateOrderPriceEvent)
           this.element.outerHTML = data;
         })
+
     }
 
     deleteSessionItem(event) {
@@ -34,6 +38,9 @@ export default class extends Controller {
       })
       .then(response => response.text())
       .then((data) => {
+        const price = Number.parseFloat(this.priceTarget.innerHTML.replace(",", "."))
+        const updateOrderPriceEvent = new CustomEvent("updated-order", {detail: {price: -price} })
+        window.dispatchEvent(updateOrderPriceEvent)
         this.element.outerHTML = data;
       })
     }

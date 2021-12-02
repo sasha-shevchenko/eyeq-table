@@ -119,7 +119,7 @@ nestea = Item.create!(
   price: 3.05,
   category: beverages
 )
-file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637923306/eyeqtable/nestea_hlyo9x.png')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1638434265/eyeqtable/productosImgs2Fbebida-nestea-33cl2_mgz7gr.png')
 nestea.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 cafe_con_leche = Item.create!(
