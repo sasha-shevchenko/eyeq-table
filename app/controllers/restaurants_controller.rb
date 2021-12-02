@@ -8,7 +8,7 @@ class RestaurantsController < ApplicationController
   def update
     @restaurant = Restaurant.find(params[:id])
     if @restaurant.update(strong_params)
-      redirect_to restaurant_dashboard_path(@current_session.restaurant)
+      redirect_to restaurant_dashboard_path(@current_restaurant)
     end
   end
 
