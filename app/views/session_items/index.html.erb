@@ -39,10 +39,12 @@
 </div>
 
 <div class="blank-card"></div>
-<%= link_to(session_items_session_path(@current_session), method: :patch, class:"order-link") do %>
-  <button class="order-button" data-controller="order-total"
-          data-action="updated-order@window->order-total#priceUpdate">
-          Send Order | <span data-order-total-target="price">
-          <%= number_to_currency(@current_session.order_total, locale: :es) %></span>
-  </button>
-<% end %>
+<div class="w-100 fixed-bottom mb-4 text-center">
+  <%= link_to(session_items_session_path(@current_session), method: :patch, class:"order-link") do %>
+    <button class="order-button" data-controller="order-total"
+            data-action="updated-order@window->order-total#priceUpdate">
+            Send Order | <span data-order-total-target="price">
+            <%= number_to_currency(@current_session.order_total, locale: :es) %></span>
+    </button>
+  <% end %>
+</div>
