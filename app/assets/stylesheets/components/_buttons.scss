@@ -33,9 +33,9 @@
 
 .order-link {
   margin: 0 auto;
-  position: fixed;
-  bottom: 30px;
-  right: 55px;
+  // position: fixed;
+  // bottom: 30px;
+  // right: 55px;
 
   .order-button {
     color: white;
@@ -95,7 +95,7 @@
     margin: 10px auto;
     border: none;
     border-radius: 32px;
-    background: #A8E8E8;
+    background: #C1D649;
     transition: 0.3s ease;
     text-decoration: bolder;
     width: 250px;
@@ -244,7 +244,7 @@
 #back-to-home {
   background-color: rgba(254, 208, 96, 0.8);
   border: 2px solid white;
-  position: fixed;
-  bottom: 20px;
-  right: 60px;
+  // position: fixed;
+  // bottom: 20px;
+  // right: 60px;
 }
