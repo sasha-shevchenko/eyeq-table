@@ -1,9 +1,11 @@
 <nav class="navbar navbar-light">
   <div class="nav-left">
-    <div class = "navbar-logo-dashboard"><%= image_tag "eyeqwhite_logo.png" %></div>
+    <%= link_to restaurant_dashboard_path(@current_session.restaurant) do %>
+      <%= image_tag "eyeqwhite_logo.png", class:"navbar-logo-dashboard" %>
+    <% end %>
   </div>
   <div class="nav-right">
-    <div class="overview-button">Table Overview</div>
+    <%= link_to "Table Overview", restaurant_overview_path(@current_session.restaurant), class:"overview-button"%>
     <div class="notifications"><i class="far fa-bell"></i></div>
   </div>
 </nav>

@@ -4,7 +4,12 @@ Rails.application.routes.draw do
 
   resources :restaurants, only: [:show, :update] do
     resources :categories, only: [:index]
+    resource :dashboard, only: [:show, :overview]
+    get "/overview", to: "dashboards#overview"
   end
+
+  # resources :dashboard, only: [:show], as: :dashboard
+  root to: 'dashboards#show'
 
   resources :categories, only: [:create, :destroy] do
     resources :items, only: [:index, :new, :create, :edit, :update]
@@ -19,9 +24,6 @@ Rails.application.routes.draw do
       get "status", as: :status
     end
   end
-
-  get '/dashboard', to: 'dashboards#show', as: :dashboard
-  root to: 'dashboards#show'
 
   resources :tables, only: [] do
     resources :sessions, only: [:new, :update]

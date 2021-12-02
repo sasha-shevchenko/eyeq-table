@@ -53,6 +53,10 @@
       padding-top: 8px;
       color: white;
       font-size: 17px;
+        &:hover {
+        text-decoration: none;
+        color: white;
+      }
     }
     .notifications {
       font-size: 25px;
