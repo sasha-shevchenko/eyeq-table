@@ -2,52 +2,53 @@
 <div class="dashboard-show-container">
   <div class="edit-form">
     <%= render "edit-form" %>
+    <div class="add-category" data-controller="hide-form">
+      <button data-action="click->hide-form#toggleForm" class = "btn btn-add-item">Add New Category
+        <i class="fas fa-angle-down text-align-right" style = "text-align: right"></i>
+      </button>
+      <%= simple_form_for Category.new, html: { class: 'd-none', data: { hide_form_target: 'form' } } do |f| %>
+        <div>
+          <div><%= f.input :name %></div>
+          <div><%= f.button :submit %></div>
+        </div>
+      <% end %>
+    </div>
   </div>
   <h3>Menu Categories</h3>
   <% @categories.each do |category| %>
-    <div class="dash-category-card">
-      <h3><%= category.name %></h3>
-      <div class="dash-item-list">
-          <% category.items.each do |item| %>
-            <div class="dash-card">
-              <div class="dashboard-img"><%= cl_image_tag item.photo.key %></div>
-              <div class="d-flex item-name-price">
-                <div><strong><%= item.name %></strong></div>
-                <div><strong><%= number_to_currency(item.price, locale: :es) %></strong></div>
+      <div class="dash-category-card">
+        <h3><%= category.name %></h3>
+        <div class="dash-item-list">
+            <% category.items.each do |item| %>
+              <div class="dash-card">
+                <div class="dashboard-img"><%= cl_image_tag item.photo.key %></div>
+                <div class="d-flex item-name-price">
+                  <div><strong><%= item.name %></strong></div>
+                  <div><strong><%= number_to_currency(item.price, locale: :es) %></strong></div>
+                </div>
+                <div class ="item-description-format"><%= item.description %></div>
+                <ul class = "item-buttons">
+                  <li class = "d-flex justify-content-lg-center">
+                    <%= link_to edit_category_item_path(category, item) do %>
+                      <button type= "button" class = "btn btn-change-item"><i class="fas fa-edit"></i></button>
+                    <% end %>
+                    <%= link_to item_path(item), method: :delete, data: { confirm: "Are you sure you want to delete?" } do %>
+                      <button type= "button" class = "btn btn-del-item"><i class="fas fa-times"></i></button>
+                    <% end %>
+                  </li>
+                </ul>
               </div>
-              <div class ="item-description-format"><%= item.description %></div>
-              <ul class = "item-buttons">
-                <li class = "d-flex justify-content-lg-center">
-                  <%= link_to edit_category_item_path(category, item) do %>
-                    <button type= "button" class = "btn btn-change-item"><i class="fas fa-edit"></i></button>
-                  <% end %>
-                  <%= link_to item_path(item), method: :delete, data: { confirm: "Are you sure you want to delete?" } do %>
-                    <button type= "button" class = "btn btn-del-item"><i class="fas fa-times"></i></button>
-                  <% end %>
-                </li>
-              </ul>
-            </div>
+            <% end %>
+        </div>
+        <div class="dash-cat-buttons">
+          <%= link_to new_category_item_path(category) do %>
+            <button type="button" class="btn btn-info"><i class="fas fa-plus"></i> Add Item</button>
           <% end %>
+          <%= link_to category_path(category), method: :delete, data: { confirm: "Are you sure you want to delete?" } do %>
+            <button type="button" class="btn btn-warning"><i class="fas fa-times"></i> Delete Category</button>
+          <% end %>
+        </div>
       </div>
-      <div class="dash-cat-buttons">
-        <%= link_to new_category_item_path(category) do %>
-          <button type="button" class="btn btn-info"><i class="fas fa-plus"></i> Add Item</button>
-        <% end %>
-        <%= link_to category_path(category), method: :delete, data: { confirm: "Are you sure you want to delete?" } do %>
-          <button type="button" class="btn btn-warning"><i class="fas fa-times"></i> Delete Category</button>
-        <% end %>
-      </div>
-    </div>
   <% end %>
-  <h4>Create New Category</h4>
-  <div class="add-category">
-    <%= simple_form_for Category.new do |f| %>
-      <div></div>
-      <div>
-        <div><%= f.input :name %></div>
-        <div><%= f.button :submit, class: "btn btn-create-category"%></div>
-      </div>
-    <% end %>
-  </div>
 </div>
 <%= render "shared/footer" %>
