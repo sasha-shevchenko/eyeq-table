@@ -9,7 +9,7 @@
       <h3><%= category.name %></h3>
       <div class="dash-item-list">
           <% category.items.each do |item| %>
-            <div class="card">
+            <div class="dash-card">
               <div class="dashboard-img"><%= cl_image_tag item.photo.key %></div>
               <div class="d-flex item-name-price">
                 <div><strong><%= item.name %></strong></div>

@@ -4,6 +4,8 @@
 }
 .dash-item-list{
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
   li{
     margin: 0px;
       .far {
@@ -15,13 +17,14 @@
   }
 }
 
-.card {
+.dash-card {
+  background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
   margin: auto;
   text-align: center;
   font-family: arial;
-  width: 120px;
+  width: 270px;
   height: 320px;
   font-size: 12px;
   margin-top: 10px;
@@ -34,7 +37,8 @@
   }
 }
 
-.card img {
+.dash-card img {
+
   height: 130px;
   object-fit: contain;
   margin-top: 20px;
