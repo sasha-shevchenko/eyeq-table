@@ -2,17 +2,6 @@
 <div class="dashboard-show-container">
   <div class="edit-form">
     <%= render "edit-form" %>
-    <div class="add-category" data-controller="hide-form">
-      <button data-action="click->hide-form#toggleForm" class = "btn btn-add-item">Add New Category
-        <i class="fas fa-angle-down text-align-right" style = "text-align: right"></i>
-      </button>
-      <%= simple_form_for Category.new, html: { class: 'd-none', data: { hide_form_target: 'form' } } do |f| %>
-        <div>
-          <div><%= f.input :name %></div>
-          <div><%= f.button :submit %></div>
-        </div>
-      <% end %>
-    </div>
   </div>
   <h3>Menu Categories</h3>
   <% @categories.each do |category| %>
@@ -51,5 +40,16 @@
       </div>
   <% end %>
 </div>
+ <div class="add-category" data-controller="hide-form">
+      <button data-action="click->hide-form#toggleForm" class = "btn btn-add-item">Add New Category
+        <i class="fas fa-angle-down text-align-right" style = "text-align: right"></i>
+      </button>
+      <%= simple_form_for Category.new, html: { class: 'd-none', data: { hide_form_target: 'form' } } do |f| %>
+        <div>
+          <div><%= f.input :name %></div>
+          <div><%= f.button :submit %></div>
+        </div>
+      <% end %>
+    </div>
 <div class="blank-card"></div>
 <%= render "shared/footer" %>
