@@ -1,7 +1,7 @@
 <nav class="navbar navbar-light">
   <ul>
     <li class="nav-item">
-      <%= link_to restaurant_path(current_restaurant) do %>
+      <%= link_to restaurant_path(@current_session.restaurant) do %>
         <%= image_tag "logo.svg", class:"avatar" %>
       <% end %>
     </li>
