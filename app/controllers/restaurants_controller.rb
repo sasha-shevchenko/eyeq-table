@@ -15,6 +15,6 @@ class RestaurantsController < ApplicationController
   private
 
   def strong_params
-    params.require(:restaurant).permit(:name, :instagram_url, :facebook_url, :tripadvisor_url, :logo)
+    params.require(:restaurant).permit(:name, :cuisine, :instagram_url, :facebook_url, :tripadvisor_url, :logo)
   end
 end
