@@ -7,7 +7,7 @@
   <% @categories.each do |category| %>
     <div class="dash-category-card">
       <h3><%= category.name %></h3>
-      <div class="dash-item-list row row-cols-1 row-cols-md-3">
+      <div class="dash-item-list">
           <% category.items.each do |item| %>
             <div class="card">
               <div class="dashboard-img"><%= cl_image_tag item.photo.key %></div>
