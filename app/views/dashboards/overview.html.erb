@@ -7,22 +7,25 @@
       </div>
     </div>
     <div class="active-orders-column">
-      <h1 class="active-orders">Table orders</h1>
-      <% @sessions.each do |session| %>
-        <%# <p>Session <%= session.id %></p>
-        <div class="active-orders-card">
-          <p>Table number: <%= session.table.number %></p>
-          <ul class="list-unstyled">
-            <% session.session_items.each do |session_item| %>
-              <p class="time-stamp">Time stamp: <%= session_item.created_at %></p>
-              <li class="active-orders-items">
-                <% quantity = session.session_items.to_a.count(session_item) %>
-                <p>Ordered Item: <%= session_item.quantity %>x <%= session_item.item.name %></p>
-              </li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
+    <h1 class="active-orders">Table orders</h1>
+      <div class="active-orders-card">
+        <h2>Order #<%= @session.id %></h2>
+        <p>Table number: <%= @session.table.number %></p>
+        <p> <%= @session.updated_at.strftime('%D -%r') %> </p>
+
+        <ul class="list-unstyled">
+
+          <% @session.distinct_items.each do |item| %>
+            <% items_count = @session.items_count %>
+            <li>
+              <% quantity = items_count[item.name] %>
+              <p><%= quantity %>x <%= item.name %> </p>
+            </li>
+          <% end %>
+
+        </ul>
+
+      </div>
     </div>
   </div>
 </div>
