@@ -1,26 +1,25 @@
 .dashboard-overview-container {
-  width: 100%;
-  height: 700px;
+  height: 800px;
   margin: 0 auto;
-  display: flex;
   justify-content: center;
+  width: 90%;
+  display: block;
+  margin-top: 15px;
 }
 
 .restaurant-overview-display {
-  background-color: #FFF0CD;
-  width: 1100px;
+  background-color: #fff7e2;
   height: 630px;
   border-radius: 16px;
-  margin-top: 50px;
-  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border: 1px solid #f5f5f5;
-
   display: flex;
   justify-content:space-between;
 }
 
 .table-overview-plan {
-  background-color: #f5f5f5;
+  background-color: #ffeab6;
   height: 100%;
   width: 70%;
   border-bottom-left-radius: 16px;
@@ -45,23 +44,27 @@
 }
 
 .table-overview-img {
-  width: 90%;
-  height: 55%;
-  background-image: url("floor-plan.png");
+  width: 600px;
+  height: 100%;
+  background-image: url("table_plan_2.png");
+  object-fit: contain;
   background-size: 100% auto;
   background-repeat: no-repeat;
-
   position: absolute;
-  left: 32px;
-  top: 130px;
+  left: 150px;
+  top: 20px;
 }
 
 .active-orders {
-  padding: 20px;
+  // padding: 20px;
+  margin-bottom: 0.5rem;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 .active-orders-card {
-  background-color: #FED060;
+  background-color: #ffffff;
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
   border-radius: 16px;
 
@@ -69,8 +72,13 @@
   margin-right: 25px;
   margin-bottom: 20px;
   padding: 25px;
+  margin-top: 20px;
 }
 
 .active-orders-items {
   font-size: 10px;
 }
+
+// .green-pin {
+//   background-image: url(green_pin.png);
+// }
