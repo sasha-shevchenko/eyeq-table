@@ -5,7 +5,7 @@
         <span aria-hidden="true">&times;</span>
       </button>
       <div class="item-card">
-        <%= cl_image_tag item.photo.key %>
+        <div class = "item-card-images"><%= cl_image_tag item.photo.key %></div>
         <div class="item-info">
           <p><%= item.name %></p>
           <%= item.description %>
