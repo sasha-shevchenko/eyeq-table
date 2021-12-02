@@ -94,7 +94,7 @@ agua = Item.create!(
 )
 file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637923305/eyeqtable/agua_u8xncl.png')
 agua.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
-binding.pry
+
 coca_cola = Item.create!(
   name: "Coca-Cola (33cl)",
   description: "No need for a description. Everyone knows what Coca-Cola is...",
