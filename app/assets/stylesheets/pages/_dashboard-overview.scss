@@ -9,7 +9,7 @@
 
 .restaurant-overview-display {
   background-color: #fff7e2;
-  height: 630px;
+  height: 500px;;
   border-radius: 16px;
   margin-top: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -19,7 +19,7 @@
 }
 
 .table-overview-plan {
-  background-color: #ffeab6;
+  background-color: white;
   height: 100%;
   width: 70%;
   border-bottom-left-radius: 16px;
@@ -44,15 +44,15 @@
 }
 
 .table-overview-img {
-  width: 700px;
+  width: 860px;
   height: 100%;
   background-image: url("tableplan.png");
   object-fit: contain;
   background-size: 100% auto;
   background-repeat: no-repeat;
   position: absolute;
-  left: 50px;
-  top: 20px;
+  left: 20px;
+  top: 40px;
 }
 
 .active-orders {
