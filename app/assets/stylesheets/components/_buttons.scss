@@ -71,9 +71,11 @@
   width: 100%;
   height: calc(1.5em + 0.75rem + 2px);
   border: none;
-  border-radius: 5px;
+  border-radius: 7px;
   text-align: left;
   color: rgba(0, 0, 0, 0.779);
+  padding: 7px;
+  color: rgb(48, 48, 48);
 }
 
 .formcontent {
