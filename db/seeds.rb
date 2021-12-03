@@ -224,7 +224,7 @@ patatasbravas = Item.create!(
   price: 3.95,
   category: tapas
 )
-file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1637924921/eyeqtable/patatas-bravas_jtd8ss.png')
+file = URI.open('https://res.cloudinary.com/dwonn5etb/image/upload/v1638519867/eyeqtable/patatas-bravas_f42yuj.png')
 patatasbravas.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 mushrooms = Item.create!(
