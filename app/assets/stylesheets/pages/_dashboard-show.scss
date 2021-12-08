@@ -1,5 +1,9 @@
 .dashboard-show-container {
-  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.inner-show-container {
+  width: 85%;
   margin: 0 auto;
   h3 {
     margin-top: 20px;
