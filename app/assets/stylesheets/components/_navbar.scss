@@ -36,6 +36,7 @@
 
 .navbar-side {
   height: 200;
+  min-width: 90px;
   background-color: #FED060;
 }
 .nav-content {
@@ -43,11 +44,13 @@
   flex-direction: column;
   align-items: center;
   position: sticky;
-  top: 32vh;
+  top: 12px;
 }
 .navbar-logo-dashboard {
-  width: 50px;
-  margin: 6px;
+  width: 40px;
+  margin: 10px;
   filter: invert(80%) sepia(17%) saturate(2138%) hue-rotate(345deg) brightness(88%) contrast(92%);
-  padding: 15px 0px;
+  &:hover {
+    cursor: pointer;
+  }
 }
