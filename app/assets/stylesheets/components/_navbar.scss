@@ -33,34 +33,46 @@
   filter: invert(80%) sepia(17%) saturate(2138%) hue-rotate(345deg) brightness(88%) contrast(92%);
   width: 30px;
 }
-.nav-left {
-  padding-left: 15px;
-  display: flex;
-    h5 {
-      padding-top: 8px;
-      color: white;
-    }
-    img {
-      width: 150px;
-      margin-right: 7px;
-    }
-}
+// .nav-left {
+//   padding-left: 15px;
+//   display: flex;
+//     h5 {
+//       padding-top: 8px;
+//       color: white;
+//     }
+//     img {
+//       width: 150px;
+//       margin-right: 7px;
+//     }
+// }
 
-.nav-right {
+// .nav-right {
+//   display: flex;
+//     .overview-button {
+//       margin-right: 20px;
+//       padding-top: 8px;
+//       color: white;
+//       font-size: 17px;
+//         &:hover {
+//         text-decoration: none;
+//         color: white;
+//       }
+//     }
+//     .notifications {
+//       font-size: 25px;
+//       margin-right: 15px;
+//       color: white;
+//     }
+// }
+
+.navbar-side {
+  height: 100vh;
+  background-color: #FED060;
   display: flex;
-    .overview-button {
-      margin-right: 20px;
-      padding-top: 8px;
-      color: white;
-      font-size: 17px;
-        &:hover {
-        text-decoration: none;
-        color: white;
-      }
-    }
-    .notifications {
-      font-size: 25px;
-      margin-right: 15px;
-      color: white;
-    }
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.navbar-logo-dashboard {
+  width: 120px;
+  margin: 8px;
 }

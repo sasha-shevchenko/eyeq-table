@@ -1,11 +1,9 @@
-<nav class="navbar navbar-light">
-  <div class="nav-left">
-    <%= link_to restaurant_dashboard_path(current_restaurant) do %>
-      <%= image_tag "eyeqwhite_logo.png", class:"navbar-logo-dashboard" %>
-    <% end %>
-  </div>
-  <div class="nav-right">
-    <%= link_to "Table Overview", restaurant_overview_path(current_restaurant), class:"overview-button"%>
-    <div class="notifications"><i class="far fa-bell"></i></div>
+<nav class="navbar-side">
+  <%= link_to restaurant_dashboard_path(current_restaurant) do %>
+    <%= image_tag "eyeqwhite_logo.png", class:"navbar-logo-dashboard" %>
+  <% end %>
+  <%= link_to "Table Overview", restaurant_overview_path(current_restaurant), class:"overview-button"%>
+  <div class="notifications">
+    <i class="far fa-bell"></i>
   </div>
 </nav>

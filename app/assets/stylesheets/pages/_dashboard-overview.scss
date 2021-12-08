@@ -1,4 +1,8 @@
 .dashboard-overview-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.overview-body {
   height: 800px;
   margin: 0 auto;
   justify-content: center;
@@ -7,60 +11,27 @@
   margin-top: 15px;
 }
 
-.restaurant-overview-display {
-  background-color: #fff7e2;
-  height: 500px;;
-  border-radius: 16px;
-  margin-top: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border: 1px solid #f5f5f5;
-  display: flex;
-  justify-content:space-between;
-}
-
 .table-overview-plan {
   background-color: white;
   height: 100%;
-  width: 70%;
   border-bottom-left-radius: 16px;
   border-top-left-radius: 16px;
-
   position: relative;
-  // display: flex;
-  // justify-content: center;
-
   h1 {
     position: absolute;
     left: 45px;
     top: 45px;
   }
+  img {
+    width: 700px;
+  }
 }
 
 .active-orders-column {
   height: 100%;
-  width: 30%;
+  width: 50%;
   margin: 2px;
   border-left: 1px solid #f5f5f5;
-}
-
-.table-overview-img {
-  width: 860px;
-  height: 100%;
-  background-image: url("tableplan.png");
-  object-fit: contain;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  position: absolute;
-  left: 20px;
-  top: 40px;
-}
-
-.active-orders {
-  // padding: 20px;
-  margin-bottom: 0.5rem;
-  font-family: "Work Sans", sans-serif;
-  font-weight: 500;
-  line-height: 1.2;
 }
 
 .active-orders-card {
@@ -78,7 +49,3 @@
 .active-orders-items {
   font-size: 10px;
 }
-
-// .green-pin {
-//   background-image: url(green_pin.png);
-// }
